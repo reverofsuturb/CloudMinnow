@@ -9,7 +9,7 @@ const registerUser = async (event) => {
   const haspetsRegister = document.querySelector("#haspets-input-register");
 
   // post to /api/users/ to fetch response
-  const registerUserRequest = await fetch("/api/users", {
+  const registerUserRequest = await fetch("/api/user", {
     method: "POST",
     body: JSON.stringify({
       username: usernameRegister.value,
@@ -21,7 +21,7 @@ const registerUser = async (event) => {
   });
 // if request goes through user is moved to profile page
   if (registerUserRequest.ok) {
-    // **********document.location.replace('/'); route to which page?
+    document.location.replace('/profile');
   } else {
     // **********do we want to handle this differently?
     alert("You couldn't register, please try again");
