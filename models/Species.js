@@ -5,7 +5,7 @@ class Species extends Model {}
 
 Species.init(
   {
-    specie_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
