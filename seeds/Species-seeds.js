@@ -7,21 +7,7 @@ const specieData = [
   {
     specie_type: 'cat',
   },
-  {
-    specie_type: 'dog',
-  },
-  {
-    specie_type: 'cat',
-  },
-  {
-    specie_type: 'cat',
-  },
-  {
-    specie_type: 'dog',
-  },
-  {
-    specie_type: 'cat',
-  },
+
 
 
 ];
