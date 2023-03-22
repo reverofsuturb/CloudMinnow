@@ -1,6 +1,6 @@
 const { User } = require('../models');
 
-const Userdata = [
+const userdata = [
   {
     username: 'flyigpotato',
     email: 'flyigpotato@yahoo.com',
@@ -39,6 +39,6 @@ const Userdata = [
   },
 ];
 
-const seedPaintings = () => Painting.bulkCreate(paintingdata);
+const seedUser = () => User.bulkCreate(userdata);
 
-module.exports = seedPaintings;
+module.exports = seedUser;
