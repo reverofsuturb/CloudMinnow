@@ -9,7 +9,7 @@ const registerAnimal = async (event) => {
   const animalDescription = document.querySelector('#animaldescription-input-register');
 
    // post to /api/animals/ to fetch response
-  const registerAnimalRequest = await fetch ('/api/animals', {
+  const registerAnimalRequest = await fetch ('/api/animal', {
     method: 'POST',
     body: JSON.stringify({
       name: animalName.value,
@@ -22,7 +22,7 @@ const registerAnimal = async (event) => {
   });
 
   if (registerAnimalRequest.ok) {
-        // **********document.location.replace('/'); route to which page?
+    document.location.replace('/profile');
   } else {
     // **********do we want to handle this differently?
     alert("You couldn't register your animal, please try again");
