@@ -37,8 +37,8 @@ User.init(
     },
     has_pets: {
         type: DataTypes.BOOLEAN,
-      },
-
+     },
+    
   },
   {
     hooks: {

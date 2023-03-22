@@ -32,6 +32,11 @@ Product.init(
           isNumeric: true
         }
       },
+      
+      filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      },
 
     user_id: {
       type: DataTypes.INTEGER,
@@ -40,11 +45,11 @@ Product.init(
         key: 'id'
       }
     },
-    animal_id: {
+    specie_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'animal',
-        key: 'id'
+        model: 'species',
+        key: 'specie_id:'
       }
     }
   },
@@ -53,7 +58,7 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'product',
   }
 );
 
