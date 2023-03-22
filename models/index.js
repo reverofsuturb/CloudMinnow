@@ -6,8 +6,8 @@ Users.hasMany(Animal, {
   foreignKey: 'user_id',
 });
 
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
+Animal.belongsTo(Users, {
+  foreignKey: 'user_id',
 });
 
 module.exports = { Users, Animal, Product };
