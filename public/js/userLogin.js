@@ -7,7 +7,7 @@ const userLogin = async (event) => {
   const passwordInput = document.querySelector("#password-input-login");
 
   // post to login functionality under userRoutes.js and fetch response
-  const loginRequest = await fetch("/api/users/login", {
+  const loginRequest = await fetch("/api/user/login", {
     method: "POST",
     body: JSON.stringify({
       username: usernameInput.value,
@@ -16,9 +16,9 @@ const userLogin = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
 
-  // if correct username and password move to page
+  // if correct username and password move to profile page
   if (loginRequest.ok) {
-    // **********document.location.replace('/'); route to which page?
+    document.location.replace('/profile');
   } else {
     // **********do we want to handle this differently?
     alert("Incorrect Username or Password, failed to login");

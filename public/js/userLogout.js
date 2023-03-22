@@ -1,13 +1,13 @@
 const userLogout = async () => {
   // post to api/user/logout to fetch response
-  const logoutRequest = await fetch("api/users/logout", {
+  const logoutRequest = await fetch("api/user/logout", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   });
 
   // if request goes through user is moved to page
   if (logoutRequest.ok) {
-    // **********document.location.replace('/'); route to which page?
+    document.location.replace('/products');
   } else {
     // **********do we want to handle this differently?
     alert("Something went wrong, failed to log out, please try again");
