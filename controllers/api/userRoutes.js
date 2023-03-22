@@ -28,9 +28,6 @@ try{
 );
 
 
-
-
-
 //USER POST ROUTES
 router.post('/', async (req, res) => {
   try {
