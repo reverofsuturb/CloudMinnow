@@ -28,11 +28,17 @@ Animal.init(
     user_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'users',
-          key: 'id',
+        model: 'users',
+        key: 'id',
         },
-      },
-
+    },
+      species_id: {
+        type: DataTypes.INTEGER,
+        references: {
+        model: 'species',
+        key: 'id',
+        }
+    }
   },
   {
     sequelize,
