@@ -11,4 +11,4 @@ Animal.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-module.exports = { User, Animal, Product };
+module.exports = { User, Animal, Product, Species };
