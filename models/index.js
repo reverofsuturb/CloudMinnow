@@ -1,13 +1,14 @@
-const Users = require('./User');
+const User = require('./User');
 const Animal = require('./Animal');
 const Product = require('./Product');
+const Species = require('./Species');
 
-Users.hasMany(Animal, {
+User.hasMany(Animal, {
   foreignKey: 'user_id',
 });
 
-Animal.belongsTo(Users, {
+Animal.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-module.exports = { Users, Animal, Product };
+module.exports = { User, Animal, Product };
