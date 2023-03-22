@@ -3,28 +3,32 @@ const {Animal, Product, User } = require('../../models');
 
 
 
-//GET all users
+//GET all Animals
+router.get('/', async (req, res) => {
+  try{
+    const animalData = await User.findAll({include: Product});
+    res.status(200).json(animalData)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
 
-// GET One User
+// GET One Animal
 router.get('/', async (req, res) => {
   try {
-    const userData = await User.findOne(req.params.id, { include: Animal});
-    if (!userData) {
-      res.status(404).json({message: no});
+    const animalData = await User.findOne(req.params.id, {include: Product});
+    if (!animalData) {
+      res.status(404).json({message: 'No animal with this id'});
       return;
     }
-    res.status(200).json(userData)
+    res.status(200).json(animalData)
    } catch(err) {
     res.status(500).json(err);
     }
   });
 
 
-
-
-
-
-
+//POST ANIMAL
 
     router.post('/', async (req, res) => {
   try {
@@ -33,6 +37,9 @@ router.get('/', async (req, res) => {
 
 }
 });
+
+//UPDATE ANIMAL
+//DELETE ANIMAL
 
 
 module.exports = router;

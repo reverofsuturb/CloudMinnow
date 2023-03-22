@@ -17,7 +17,7 @@ router.get('/:id', async (req, res) => {
 try{
   const userData = await User.findOne(req.params.id, {include: Animal});
   if(!userData) {
-    res.status(404).json({message: "no"});
+    res.status(404).json({message: "No user with that id"});
     return;
   }
   res.status(200).json(userData);
@@ -28,7 +28,7 @@ try{
 );
 
 
-//USER POST ROUTES
+//POST USER
 router.post('/', async (req, res) => {
   try {
 
@@ -36,6 +36,10 @@ router.post('/', async (req, res) => {
 
 }
 });
+
+//UPDATE USER
+
+//DELETE USER
 
 
 module.exports = router;
