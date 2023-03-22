@@ -1,11 +1,12 @@
+
 const router = require('express').Router();
-const animalRoutes = require('./animalRoutes')
-const ownerRoutes = require('./ownerRoutes')
-const productRoutes = require('./productRoutes')
+const animalRoutes = require('./animalRoutes');
+const productRoutes = require('./productRoutes');
+const userRoutes = require('./userRoutes');
 
-
-router.use('/animals', animalRoutes);
-router.use('/owners', ownerRoutes);
-router.use('/products', productRoutes)
+// main routes and api db routes
+router.use('/animal', animalRoutes);
+router.use('/products', productRoutes);
+router.use('/user', userRoutes);
 
 module.exports = router;
