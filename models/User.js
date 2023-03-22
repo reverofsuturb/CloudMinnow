@@ -37,7 +37,7 @@ User.init(
     },
     has_pets: {
         type: DataTypes.BOOLEAN,
-     },
+    },
     
   },
   {
@@ -51,7 +51,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'users',
+    modelName: 'user',
   }
 );
 
