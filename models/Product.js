@@ -49,7 +49,7 @@ Product.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'species',
-        key: 'specie_id:'
+        key: 'id'
       }
     }
   },
