@@ -65,32 +65,6 @@ router.post('/', async (req, res) => {
 });
 
 //UPDATE PRODUCTS
-router.put('/:id', async (req, res) => {
-  // update product data
-  Product.update(req.body, {
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((productData) => {
-      // find all associated tags from ProductTag
-      return Product.findAll({ where: { product_name: req.params.id } });
-    })
-      // run both actions
-      return Promise.all([
-        ProductTag.destroy({ where: { id: productTagsToRemove } }),
-        ProductTag.bulkCreate(newProductTags),
-      ]);
-    })
-    .then((updatedProductTags) => res.json(updatedProductTags))
-    .catch((err) => {
-      // console.log(err);
-      res.status(400).json(err);
-    });
-
-
-
-
 
 
 //DELETE PRODUCTS
