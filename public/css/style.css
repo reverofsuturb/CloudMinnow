@@ -8,3 +8,80 @@
   --medium-3: #7a492b;
   --dark: #0c3b2e;
 }
+
+* {
+  margin: 0%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#profile {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+#prof-buttons {
+  margin-top: 25px;
+}
+
+.nav-area {
+  height: 100px;
+  background-color: var(--dark);
+}
+
+#nav-bar {
+  background-color: var(--dark);
+}
+
+#nav-bar a {
+  font-size: 20px;
+}
+
+#sign-up {
+  background-color: var(--light-1);
+  font-size: 15px;
+}
+
+#login {
+  background-color: var(--medium-light-3);
+  font-size: 15px;
+}
+
+.footer {
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--dark);
+}
+
+#ribbon-1 {
+  background-color: var(--light-2);
+}
+
+#ribbon-2 {
+  background-color: var(--medium-1);
+  color: var(--light-1);
+}
+
+#name {
+  font-size: 20px;
+  background-color: var(--medium-light-1);
+}
+
+#rollback_left {
+  background-color: var(--medium-light-1);
+}
+
+#rollback_right {
+  background-color: var(--medium-light-1);
+}
+
+.divider {
+  height: 40px;
+  background-color: var(--light-2);
+}
+
+.socials li {
+  display: inline;
+}
