@@ -12,7 +12,7 @@ Animal.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-Species.hasMany(User, {
+Species.hasMany(Animal, {
   foreignKey: 'species_id',
 })
 
@@ -21,11 +21,11 @@ Animal.belongsTo(Species, {
 })
 
 Species.hasMany(Product, {
-  foreign_key: 'specie_id'
+  foreign_key: 'species_id'
 })
 
 Product.belongsTo(Species, {
-  foreignKey: 'specie_id'
+  foreignKey: 'species_id'
 })
 
 module.exports = { User, Animal, Product, Species };

@@ -6,7 +6,7 @@ const {Animal, Product, User } = require('../../models');
 //GET all Animals
 router.get('/', async (req, res) => {
   try{
-    const animalData = await User.findAll({include: Product});
+    const animalData = await Animal.findAll({include: User});
     res.status(200).json(animalData)
   } catch (err) {
     res.status(500).json(err)
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET One Animal
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const animalData = await User.findOne(req.params.id, {include: Product});
     if (!animalData) {
