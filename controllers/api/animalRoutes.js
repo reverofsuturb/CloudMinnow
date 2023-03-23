@@ -60,7 +60,7 @@ router.post("/", async (req, res) => {
       description: req.body.description,
       user_id: req.session.userId
     });
-
+    res.status(200).json(newAnimal);
   } catch (err) {
     res.status(500).json(err);
   }

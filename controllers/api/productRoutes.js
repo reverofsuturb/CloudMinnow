@@ -56,15 +56,16 @@ router.post('/', async (req, res) => {
       price: req.body.price,
       stock: req.body.stock,
       filename: req.body.filename,
-      user_id: req.session.userId,
       species_id: req.body.species_id
     });
-
+    res.status(200).json(newProduct);
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 //UPDATE PRODUCTS
+
 //DELETE PRODUCTS
 
 
