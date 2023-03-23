@@ -67,5 +67,22 @@ router.post("/", async (req, res) => {
 });
 //UPDATE ANIMAL
 //DELETE ANIMAL
+router.delete("/:id", async (req, res) => {
+  try {
+    const animalData = await Animal.destroy({
+      where: {
+        id: req.params.id
+      }
+      },
+    );
+    if (!animalData) {
+      res.status(404).json({ message: "No animal with this id" });
+      return;
+    }
+    res.status(200).json(animalData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
