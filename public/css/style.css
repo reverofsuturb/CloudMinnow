@@ -3,46 +3,47 @@
   --light-2: #93a4b8;
   --medium-light-1: #afb881;
   --medium-light-2: #bb8a52;
+  --medium-light-3: #ffd966;
   --medium-1: #4b5a6b;
   --medium-2: #87293f;
   --medium-3: #7a492b;
   --dark: #0c3b2e;
 }
-
+​
 * {
   margin: 0%;
   padding: 0px;
   box-sizing: border-box;
 }
-
+​
 #profile {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
 }
-
+​
 #prof-buttons {
   margin-top: 25px;
 }
-
+​
 .nav-area {
   height: 100px;
   background-color: var(--dark);
 }
-
+​
 #nav-bar {
   background-color: var(--dark);
 }
-
+​
 #nav-bar a {
   font-size: 20px;
 }
-
+​
 #sign-up {
   background-color: var(--light-1);
   font-size: 15px;
 }
-
+​
 #login {
   background-color: var(--medium-light-3);
   font-size: 15px;
@@ -50,38 +51,76 @@
 
 .footer {
   height: 100px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
   background-color: var(--dark);
 }
-
+​
 #ribbon-1 {
   background-color: var(--light-2);
 }
-
+​
 #ribbon-2 {
   background-color: var(--medium-1);
   color: var(--light-1);
 }
-
-#name {
+​
+#name-age {
   font-size: 20px;
   background-color: var(--medium-light-1);
 }
-
+​
 #rollback_left {
   background-color: var(--medium-light-1);
 }
-
+​
 #rollback_right {
   background-color: var(--medium-light-1);
 }
-
-.divider {
-  height: 40px;
+​
+#divider {
+  height: 30px;
   background-color: var(--light-2);
 }
-
+​
 .socials li {
   display: inline;
+}
+​
+.products {
+  background-color: var(--medium-light-2);
+  /* background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat; */
+  padding: 20px;
+}
+​
+#products {
+  display: flex;
+  justify-content: center;
+}
+​
+#prod-cards {
+  height: 200px;
+  width: 200px;
+}
+​
+#dimmer {
+  background-color: var(--medium-light-3);
+}
+​
+#modal-price {
+  font-size: 25px;
+}
+​
+#have-pets {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+​
+#register {
+  padding-top: 10px;
+  margin-top: 10px;
 }
