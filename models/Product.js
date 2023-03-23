@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Product extends Model {}
 
@@ -10,55 +10,55 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
 
     product_name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      price: {
-        type: DataTypes.DECIMAL(13, 2),
-        allowNull: false,
-        validate: {
-          isDecimal: true
-        }
-      },
-      stock: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        defaultValue: 0,
-        Validate: {
-          isNumeric: true
-        }
-      },
-      
-      filename: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    price: {
+      type: DataTypes.DECIMAL(13, 2),
+      allowNull: false,
+      validate: {
+        isDecimal: true,
       },
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+      Validate: {
+        isNumeric: true,
+      },
+    },
+
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
 
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id'
-      }
+        model: "user",
+        key: "id",
+      },
     },
     specie_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'species',
-        key: 'id'
-      }
-    }
+        model: "species",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product',
+    modelName: "product",
   }
 );
 
