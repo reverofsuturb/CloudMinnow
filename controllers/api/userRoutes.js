@@ -56,7 +56,7 @@ router.post("/", async (req, res) => {
       req.session.username = req.body.username;
       req.session.loggedIn = true;
 
-      req.json(newUser);
+      res.json(newUser);
     });
   } catch (err) {
     res.status(500).json(err);
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
       req.session.username = req.body.username;
       req.session.loggedIn = true;
 
-      req.json({ user, message: "Welcome to Fluffy!" });
+      res.json({ user, message: "Welcome to Fluffy!" });
     });
   } catch (err) {
     res.status(400).json({ message: "Please check your input and try again" });

@@ -51,13 +51,21 @@ router.get('/:id', async (req, res) => {
 //POST products
 router.post('/', async (req, res) => {
   try {
-
-} catch (err) {
-
-}
+    const newProduct = await Product.create({
+      product_name: req.body.product_name,
+      price: req.body.price,
+      stock: req.body.stock,
+      filename: req.body.filename,
+      species_id: req.body.species_id
+    });
+    res.status(200).json(newProduct);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 //UPDATE PRODUCTS
+
 //DELETE PRODUCTS
 
 
