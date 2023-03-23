@@ -66,6 +66,7 @@ router.post('/', async (req, res) => {
 
 //UPDATE PRODUCTS
 
+
 //DELETE PRODUCTS
 router.delete('/:id', async (req, res) => {
   try {
