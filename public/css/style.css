@@ -3,6 +3,7 @@
   --light-2: #93a4b8;
   --medium-light-1: #afb881;
   --medium-light-2: #bb8a52;
+  --medium-light-3: #ffd966;
   --medium-1: #4b5a6b;
   --medium-2: #87293f;
   --medium-3: #7a492b;
@@ -77,11 +78,26 @@
   background-color: var(--medium-light-1);
 }
 
-.divider {
+#divider {
   height: 40px;
   background-color: var(--light-2);
 }
 
 .socials li {
   display: inline;
+}
+
+#products {
+  display: inline-flex;
+  align-items: center;
+  margin: 20px;
+}
+
+#prod-cards {
+  height: 200px;
+  width: 200px;
+}
+
+#dimmer {
+  background-color: var(--medium-light-3);
 }
