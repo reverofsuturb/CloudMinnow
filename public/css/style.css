@@ -9,41 +9,41 @@
   --medium-3: #7a492b;
   --dark: #0c3b2e;
 }
-​
+
 * {
   margin: 0%;
   padding: 0px;
   box-sizing: border-box;
 }
-​
+
 #profile {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
 }
-​
+
 #prof-buttons {
   margin-top: 25px;
 }
-​
+
 .nav-area {
   height: 100px;
   background-color: var(--dark);
 }
-​
+
 #nav-bar {
   background-color: var(--dark);
 }
-​
+
 #nav-bar a {
   font-size: 20px;
 }
-​
+
 #sign-up {
   background-color: var(--light-1);
   font-size: 15px;
 }
-​
+
 #login {
   background-color: var(--medium-light-3);
   font-size: 15px;
@@ -56,38 +56,38 @@
   padding-right: 25px;
   background-color: var(--dark);
 }
-​
+
 #ribbon-1 {
   background-color: var(--light-2);
 }
-​
+
 #ribbon-2 {
   background-color: var(--medium-1);
   color: var(--light-1);
 }
-​
+
 #name-age {
   font-size: 20px;
   background-color: var(--medium-light-1);
 }
-​
+
 #rollback_left {
   background-color: var(--medium-light-1);
 }
-​
+
 #rollback_right {
   background-color: var(--medium-light-1);
 }
-​
+
 #divider {
   height: 30px;
   background-color: var(--light-2);
 }
-​
+
 .socials li {
   display: inline;
 }
-​
+
 .products {
   background-color: var(--medium-light-2);
   /* background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
@@ -96,30 +96,30 @@
   background-repeat: no-repeat; */
   padding: 20px;
 }
-​
+
 #products {
   display: flex;
   justify-content: center;
 }
-​
+
 #prod-cards {
   height: 200px;
   width: 200px;
 }
-​
+
 #dimmer {
   background-color: var(--medium-light-3);
 }
-​
+
 #modal-price {
   font-size: 25px;
 }
-​
+
 #have-pets {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-​
+
 #register {
   padding-top: 10px;
   margin-top: 10px;

@@ -6,3 +6,11 @@ $("#rollback_right").click(function () {
 });
 
 $("#dropdown").dropdown();
+
+$(".special.cards .image").dimmer({
+  on: "hover",
+});
+
+$("#dimmer").on("click", function () {
+  $(".ui.modal").modal("show");
+});
