@@ -2,10 +2,10 @@ const { Species } = require("../models");
 
 const speciesData = [
   {
-    specie_type: "dog",
+    species_type: "dog",
   },
   {
-    specie_type: "cat",
+    species_type: "cat",
   },
 ];
 

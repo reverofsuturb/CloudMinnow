@@ -45,7 +45,7 @@ Product.init(
         key: "id",
       },
     },
-    specie_id: {
+    species_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "species",

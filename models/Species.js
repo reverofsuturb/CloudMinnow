@@ -11,7 +11,7 @@ Species.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    specie_type: {
+    species_type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
