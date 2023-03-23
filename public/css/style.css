@@ -9,34 +9,42 @@
   --medium-3: #7a492b;
   --dark: #0c3b2e;
 }
-​ * {
+
+* {
   margin: 0%;
   padding: 0px;
   box-sizing: border-box;
 }
-​ #profile {
+
+#profile {
   margin-top: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
 }
-​ #prof-buttons {
+
+#prof-buttons {
   margin-top: 25px;
 }
-​ .nav-area {
+
+.nav-area {
   height: 100px;
   background-color: var(--dark);
 }
-​ #nav-bar {
+
+#nav-bar {
   background-color: var(--dark);
 }
-​ #nav-bar a {
+
+#nav-bar a {
   font-size: 20px;
 }
-​ #sign-up {
+
+#sign-up {
   background-color: var(--light-1);
   font-size: 15px;
 }
-​ #login {
+
+#login {
   background-color: var(--medium-light-3);
   font-size: 15px;
 }
@@ -48,31 +56,39 @@
   padding-right: 25px;
   background-color: var(--dark);
 }
-​ #ribbon-1 {
+
+#ribbon-1 {
   background-color: var(--light-2);
 }
-​ #ribbon-2 {
+
+#ribbon-2 {
   background-color: var(--medium-1);
   color: var(--light-1);
 }
-​ #name-age {
+
+#name-age {
   font-size: 20px;
   background-color: var(--medium-light-1);
 }
-​ #rollback_left {
+
+#rollback_left {
   background-color: var(--medium-light-1);
 }
-​ #rollback_right {
+
+#rollback_right {
   background-color: var(--medium-light-1);
 }
-​ #divider {
+
+#divider {
   height: 30px;
   background-color: var(--light-2);
 }
-​ .socials li {
+
+.socials li {
   display: inline;
 }
-​ .products {
+
+.products {
   background-color: var(--medium-light-2);
   /* background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
   background-size: contain;
@@ -80,25 +96,31 @@
   background-repeat: no-repeat; */
   padding: 20px;
 }
-​ #products {
+
+#products {
   display: flex;
   justify-content: center;
 }
-​ #prod-cards {
+
+#prod-cards {
   height: 200px;
   width: 200px;
 }
-​ #dimmer {
+
+#dimmer {
   background-color: var(--medium-light-3);
 }
-​ #modal-price {
+
+#modal-price {
   font-size: 25px;
 }
-​ #have-pets {
+
+#have-pets {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-​ #register {
+
+#register {
   padding-top: 10px;
   margin-top: 10px;
 }
