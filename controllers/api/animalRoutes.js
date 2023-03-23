@@ -53,9 +53,18 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-  } catch (err) {}
-});
+    const newAnimal = await Animal.create({
+      name: req.body.name,
+      age: req.body.age,
+      species_id: req.body.species_id,
+      description: req.body.description,
+      user_id: req.session.userId
+    });
 
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 //UPDATE ANIMAL
 //DELETE ANIMAL
 
