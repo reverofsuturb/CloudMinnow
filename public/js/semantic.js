@@ -14,3 +14,14 @@ $(".special.cards .image").dimmer({
 $("#dimmer").on("click", function () {
   $(".ui.modal").modal("show");
 });
+
+// Nav functions
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
