@@ -8,18 +8,18 @@
                     <div class="field">
                         <label>Username</label>
                         <div class="ui left icon input">
-                            <input type="text" placeholder="Username">
+                            <input type="text" id="username-input-login" placeholder="Username">
                             <i class="user icon"></i>
                         </div>
                     </div>
                     <div class="field">
                         <label>Password</label>
                         <div class="ui left icon input">
-                            <input type="password">
+                            <input type="password" id="password-input-login">
                             <i class="lock icon"></i>
                         </div>
                     </div>
-                    <div class="ui blue submit button">Login</div>
+                    <div id="login-form" class="ui blue submit button">Login</div>
                 </div>
             </div>
             <div class="column">
@@ -27,27 +27,27 @@
             <div class="field">
                 <label>Username</label>
                 <div class="ui left icon input">
-                    <input type="text" placeholder="Username">
+                    <input type="text" id="username-input-register" placeholder="Username">
                     <i class="User icon"></i>
                 </div>
                 <div class="field">
                     <label>Email</label>
                     <div class="ui left icon input">
-                        <input type="text" placeholder="email@mail.com">
+                        <input type="text" id="email-input-register" placeholder="email@mail.com">
                         <i class="mail icon"></i>
                     </div>
                     <div class="field">
                         <label>Password</label>
                         <div class="ui left icon input">
-                            <input type="text" placeholder="New Password">
+                            <input type="text" id="password-input-register" placeholder="New Password">
                             <i class="lock icon"></i>
                         </div>
                             <div class="ui toggle checkbox">
-                                <input type="checkbox" name="pet-check">
+                                <input type="checkbox" id="haspets-input-register" name="pet-check">
                                 <label>Do you have a pet(s)</label>
                 </div>
                 <div class="middle aligned column">
-                    <div class="ui big button" id="register">
+                    <div class="ui big button" id="registeruser-form">
                         <i class="signup icon"></i>
                         Sign Up
                     </div>
@@ -60,3 +60,6 @@
 </div>
 </div>
 </div>
+
+<script src="/js/registerUser.js"></script>
+<script src="/js/userLogin.js"></script>

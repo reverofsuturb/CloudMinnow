@@ -50,13 +50,13 @@ router.post("/", async (req, res) => {
       password: req.body.password,
       has_pets: req.body.has_pets,
     });
-
+console.log(newUser);
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = req.body.username;
       req.session.loggedIn = true;
 
-      res.json(newUser);
+      res.status(200).json(newUser);
     });
   } catch (err) {
     res.status(500).json(err);
@@ -70,6 +70,7 @@ router.post("/login", async (req, res) => {
         username: req.body.username,
       },
     });
+
     if (!user) {
       res.status(400).json({ message: "Account does not exist" });
       return;
@@ -89,7 +90,7 @@ router.post("/login", async (req, res) => {
       req.session.username = req.body.username;
       req.session.loggedIn = true;
 
-      res.json({ user, message: "Welcome to Fluffy!" });
+      res.status(200).json({ user, message: "Welcome to Fluffy!" });
     });
   } catch (err) {
     res.status(400).json({ message: "Please check your input and try again" });
