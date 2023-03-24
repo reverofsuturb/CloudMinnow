@@ -120,7 +120,28 @@ router.put("/:id", withAuth, (req, res) => {
         res.status(404).json({ message: "No user found with this id" });
         return;
       }
-      res.json(UserData);
+      res.status(200).json(UserData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+// update user bio
+router.put("/", withAuth, (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.session.userId,
+    },
+  })
+    .then((UserData) => {
+      if (!UserData[0]) {
+        res.status(404).json({ message: "No user found with this id" });
+        return;
+      }
+      res.status(200).json(UserData);
     })
     .catch((err) => {
       console.log(err);
