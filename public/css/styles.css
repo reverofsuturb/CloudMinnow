@@ -152,7 +152,7 @@
 
 .products {
   background-color: var(--medium-light-2);
-  background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
+  background-image: url(../images/pet-photos/pet-accessories/pet-accessories-treats.jpg);
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;

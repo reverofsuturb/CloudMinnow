@@ -3,19 +3,18 @@ const registerUser = async (event) => {
   event.preventDefault();
 
   // declare refrences to input fields
-  const usernameRegister = document.querySelector("#username-input-register");
-  const emailRegister = document.querySelector("#email-input-register");
-  const passwordRegister = document.querySelector("#password-input-register");
-  const haspetsRegister = document.querySelector("#haspets-input-register");
-
-  // post to /api/users/ to fetch response
+  const usernameRegister = document.querySelector("#username-input-register").value;
+  const emailRegister = document.querySelector("#email-input-register").value;
+  const passwordRegister = document.querySelector("#password-input-register").value;
+  const haspetsRegister = document.querySelector("#haspets-input-register").checked;
+  // post to /api/user/ to fetch response
   const registerUserRequest = await fetch("/api/user", {
     method: "POST",
     body: JSON.stringify({
-      username: usernameRegister.value,
-      email: (emailRegister = emailRegister.value),
-      password: passwordRegister.value,
-      has_pets: haspetsRegister.value,
+      username: usernameRegister,
+      email: emailRegister,
+      password: passwordRegister,
+      has_pets: haspetsRegister,
     }),
     headers: { "Content-Type": "application/json" },
   });
@@ -28,4 +27,4 @@ const registerUser = async (event) => {
   }
 };
 // event listener on submit 
-document.querySelector("#registeruser-form").addEventListener("submit", registerUser);
+document.querySelector("#registeruser-form").addEventListener("click", registerUser);
