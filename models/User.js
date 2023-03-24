@@ -38,6 +38,9 @@ User.init(
     has_pets: {
       type: DataTypes.BOOLEAN,
     },
+    biography: {
+      type: DataTypes.STRING,
+    }
   },
   {
     hooks: {
