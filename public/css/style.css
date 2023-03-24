@@ -247,9 +247,7 @@
   #right-prof-col {
     order: 0;
   }
-  #right-prof-col img {
-    /* min-width: 100%; */
-  }
+
   #left-prof-col {
     order: 1;
   }
