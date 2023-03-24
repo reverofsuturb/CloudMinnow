@@ -3,24 +3,27 @@ const registerAnimal = async (event) => {
   event.preventDefault();
 
   // declare refrences to input fields
-  const animalName = document.querySelector('#animalname-input-register');
-  const animalAge = document.querySelector('#animalage-input-register');
-  const animalSpecies = document.querySelector('#animalspecies-input-register');
-  const animalDescription = document.querySelector('#animaldescription-input-register');
-
+  const animalName = document.querySelector('#animalname-input-register').value;
+  const animalAge = document.querySelector('#animalage-input-register').value;
+  const animalSpecies = document.querySelector('#animalspecies-input-register').value;
+  const animalDescription = document.querySelector('#animaldescription-input-register').value;
+console.log(animalName);
+console.log(animalAge);
+console.log(animalSpecies);
+console.log(animalDescription);
    // post to /api/animals/ to fetch response
   const registerAnimalRequest = await fetch ('/api/animal', {
     method: 'POST',
     body: JSON.stringify({
-      name: animalName.value,
-      age: animalAge.value,
-      species_id: animalSpecies.value,
-      description: animalDescription.value,
+      name: animalName,
+      age: animalAge,
+      species_id: animalSpecies,
+      description: animalDescription,
       // user_id:? this.user.id?
     }),
     headers: { 'Content-Type': 'application/json' },
   });
-
+console.log(registerAnimalRequest);
   if (registerAnimalRequest.ok) {
     document.location.replace('/profile');
   } else {

@@ -3,15 +3,16 @@ const userLogin = async (event) => {
   event.preventDefault();
 
   // declare refrences to input fields
-  const usernameInput = document.querySelector("#username-input-login");
-  const passwordInput = document.querySelector("#password-input-login");
-
+  const usernameInput = document.querySelector("#username-input-login").value;
+  const passwordInput = document.querySelector("#password-input-login").value;
+console.log(usernameInput);
+console.log(passwordInput);
   // post to login functionality under userRoutes.js and fetch response
   const loginRequest = await fetch("/api/user/login", {
     method: "POST",
     body: JSON.stringify({
-      username: usernameInput.value,
-      password: passwordInput.value,
+      username: usernameInput,
+      password: passwordInput,
     }),
     headers: { "Content-Type": "application/json" },
   });
@@ -25,4 +26,4 @@ const userLogin = async (event) => {
   }
 };
 // event listener on submit 
-document.querySelector("#login-form").addEventListener("submit", userLogin);
+document.querySelector("#login-form").addEventListener("click", userLogin);
