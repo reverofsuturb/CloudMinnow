@@ -15,7 +15,7 @@ Product.init(
 
     product_name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     product_description: {
       type: DataTypes.STRING,
