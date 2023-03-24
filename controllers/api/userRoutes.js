@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Animal, Product, User, Species } = require("../../models");
-
+const withAuth = require("../../utils/auth");
 //USER GET ROUTES
 //get all users
 router.get("/", async (req, res) => {
@@ -106,7 +106,26 @@ router.post("/logout", (req, res) => {
   }
 });
 
-//UPDATE USER
+// Update user
+router.put("/:id", withAuth, (req, res) => {
+  User.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((UserData) => {
+      if (!UserData[0]) {
+        res.status(404).json({ message: "No user found with this id" });
+        return;
+      }
+      res.json(UserData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 //DELETE USER
 router.delete("/:id", async (req, res) => {
