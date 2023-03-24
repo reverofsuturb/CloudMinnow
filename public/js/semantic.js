@@ -15,6 +15,12 @@ $("#dimmer").on("click", function () {
   $(".ui.modal").modal("show");
 });
 
+$('#new-pet').on('click', function() {
+  $('.ui.modal')
+  .modal('show');
+});
+
+
 // Nav functions
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");

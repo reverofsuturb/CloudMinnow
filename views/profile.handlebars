@@ -22,6 +22,45 @@
             </div>
         </div>
 
+<button class="ui button active" id="new-pet">Add new pet</button>
+    <div class="ui modal">
+        <div class="header">Add New Pet</div>
+            <div class="content">
+                <form class="ui form">
+                    <div class="field">
+                    <label>Pet Name</label>
+                    <input type="text" name="pet-name" placeholder="Pet Name">
+                    </div>
+                <div class="field">
+            <label>Pet Age</label>
+        <input type="text" name="pet-age" placeholder="Pet Age">
+    </div>
+<div class="field">
+    <label>Type of Pet (please select)</label>
+        <div class="ui fluid selection dropdown" id="dropdown">
+            <input type="hidden" name="Type of Pet">
+            <i class="dropdown icon"></i>
+            <div class="default text">Type of Pet</div>
+            <div class="menu">
+            <div class="item" data-value="1">Dog</div>
+            <div class="item" data-value="0">Cat</div>
+        </div>
+    </div>
+</div>
+<div class="field">
+    <label>Write Something About Your Pet</label>
+        <input type="text" name="pet-Bio" placeholder="Pet Bio">
+    </div>
+    <div class="field">
+        <label>Pet Photo JPEG</label>
+        <input type="text" name="pet-photo" placeholder="Pet Photo (optional)">
+    </div>
+        <button class="ui button" type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+
 
 
 
