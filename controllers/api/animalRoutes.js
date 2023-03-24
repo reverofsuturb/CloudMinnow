@@ -25,20 +25,18 @@ router.get("/", async (req, res) => {
 // GET One Animal
 router.get("/:id", async (req, res) => {
   try {
-    const animalData = await Animal.findByPk(req.params.id, 
-      {
-        include: [
-          {
-            model: Species,
-            required: false,
-          },
-          {
-            model: User,
-            required: false,
-          },
-        ],
-      },
-    );
+    const animalData = await Animal.findByPk(req.params.id, {
+      include: [
+        {
+          model: Species,
+          required: false,
+        },
+        {
+          model: User,
+          required: false,
+        },
+      ],
+    });
     if (!animalData) {
       res.status(404).json({ message: "No animal with this id" });
       return;
@@ -58,7 +56,7 @@ router.post("/", async (req, res) => {
       age: req.body.age,
       species_id: req.body.species_id,
       description: req.body.description,
-      user_id: req.session.userId
+      user_id: req.session.userId,
     });
     res.status(200).json(newAnimal);
   } catch (err) {
@@ -66,15 +64,35 @@ router.post("/", async (req, res) => {
   }
 });
 //UPDATE ANIMAL
+
+router.put("/:id", (req, res) => {
+  // update a tag's name by its `id` value
+  Animal.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((animalData) => {
+      if (!animalData[0]) {
+        res.status(404).json({ message: "Animal not found" });
+        return;
+      }
+      res.json(animalData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 //DELETE ANIMAL
 router.delete("/:id", async (req, res) => {
   try {
     const animalData = await Animal.destroy({
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
       },
-    );
+    });
     if (!animalData) {
       res.status(404).json({ message: "No animal with this id" });
       return;
