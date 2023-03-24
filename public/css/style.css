@@ -8,6 +8,7 @@
   --medium-2: #87293f;
   --medium-3: #7a492b;
   --dark: #0c3b2e;
+  --darkest: #000000;
 }
 
 * {
@@ -17,27 +18,88 @@
 }
 
 #profile {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #prof-buttons {
   margin-top: 25px;
 }
 
-.nav-area {
-  height: 100px;
-  background-color: var(--dark);
+.profile-bg {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(./assets/images/pet-photos/pet-accessories/top-view-pet-food-with-toys.jpg);
+  background-size: contain;
+  /* background-position: left; */
+  /* background-repeat: no-repeat; */
 }
 
-#nav-bar {
+.navbar {
+  background-color: var(--dark);
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--light-2);
+}
+
+.nav-link:hover {
+  color: var(--medium-light-3);
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: var(--medium-light-3);
+}
+
+.nav-logo:hover {
+  color: var(--light-1);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--light-1);
+}
+
+/* #nav-bar {
   background-color: var(--dark);
 }
 
 #nav-bar a {
   font-size: 20px;
-}
+} */
 
 #sign-up {
   background-color: var(--light-1);
@@ -90,10 +152,10 @@
 
 .products {
   background-color: var(--medium-light-2);
-  /* background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
+  background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
   background-size: contain;
   background-position: left;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   padding: 20px;
 }
 
@@ -123,4 +185,72 @@
 #register {
   padding-top: 10px;
   margin-top: 10px;
+}
+
+.landing {
+  background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 6rem;
+    flex-direction: column;
+    background-color: var(--medium-1);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px var(--darkest);
+    opacity: 95%;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    z-index: 2;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+  }
+  #right-prof-col {
+    order: 0;
+  }
+  #right-prof-col img {
+    /* min-width: 100%; */
+  }
+  #left-prof-col {
+    order: 1;
+  }
 }
