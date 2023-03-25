@@ -129,7 +129,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 // update user bio
-router.put("/", withAuth, (req, res) => {
+router.put("/profile", withAuth, (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
