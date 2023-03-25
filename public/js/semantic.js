@@ -14,12 +14,14 @@ $(".special.cards .image").dimmer({
 for (let i = 0; i < 100; i++) {
   let id = `dimmer-${i}`;
   let dimmer = ('#' + id);
+  let modalid = `ui.modal.${i}`;
+  let modal =('.' + modalid)
   
   $(dimmer).on("click", function () {
-    $(".ui.modal").modal("show");
+    $(modal).modal("show");
   });
 }
-
+  
 $('#new-pet').on('click', function() {
   $('.ui.modal')
   .modal('show');
