@@ -166,9 +166,14 @@
   display: inline;
 }
 
+.product-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .products {
   background-color: var(--medium-light-2);
-  background-image: url(./assets/images/pet-photos/pet-accessories/pet-accessories-with-food-bowl-treats.jpg);
+  background-image: url(../images/pet-photos/pet-accessories/bowls-dry-food-water.jpg);
   background-size: contain;
   background-position: left;
   /* background-repeat: no-repeat; */
@@ -176,6 +181,7 @@
 }
 
 #products {
+  margin: 0px;
   display: flex;
   justify-content: center;
 }
@@ -210,7 +216,7 @@
 
 #filter-menu {
   margin-left: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .landing {
@@ -220,6 +226,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (max-width: 1490px) {
+  .product-page {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1000px) {
