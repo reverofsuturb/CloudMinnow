@@ -11,9 +11,14 @@ $(".special.cards .image").dimmer({
   on: "hover",
 });
 
-$("#dimmer").on("click", function () {
-  $(".ui.modal").modal("show");
-});
+for (let i = 0; i < 100; i++) {
+  let id = `dimmer-${i}`;
+  let dimmer = ('#' + id);
+  
+  $(dimmer).on("click", function () {
+    $(".ui.modal").modal("show");
+  });
+}
 
 $('#new-pet').on('click', function() {
   $('.ui.modal')

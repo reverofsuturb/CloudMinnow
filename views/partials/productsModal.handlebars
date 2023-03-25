@@ -1,0 +1,33 @@
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    {{product_name}}
+  </div>
+  <div class="image content">
+    <div class="ui huge image">
+      <img
+        src="/images/{{filename}}"
+      />
+    </div>
+    <div class="description">
+      <div class="ui header">About This Product.</div>
+      <p>{{product_description}}</p>
+    </div>
+  </div>
+  <div class="extra content" id="modal-price">
+    <a>
+      <i class="dollar sign icon"></i>
+      {{price}}
+    </a>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Go Back
+    </div>
+    <div class="ui right labeled icon button">
+      Add To Cart
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+</div>
