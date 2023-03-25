@@ -1,13 +1,12 @@
-const router = require('express').Router();
+const router = require("express").Router();
 const { Animal, Product, User, Species } = require("./../models");
 const withAuth = require("./../utils/auth");
 
-
-router.get('/', async (req, res) => {
-res.render('landing')
+router.get("/", async (req, res) => {
+  res.render("landing");
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.userId, {
       include: [
@@ -23,19 +22,18 @@ router.get('/profile', withAuth, async (req, res) => {
       return;
     }
     const user = userData.get({ plain: true });
-    res.render('profile', { user, loggedIn: req.session.loggedIn })
+    res.render("profile", { user, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
-
 });
 
-router.get('/login', async (req, res) => {
-res.render('login-register')
+router.get("/login", async (req, res) => {
+  res.render("login-register");
 });
 
-router.get('/products', async (req, res) => {
-try {
+router.get("/products", async (req, res) => {
+  try {
     const productData = await Product.findAll({
       include: [
         {
@@ -45,8 +43,9 @@ try {
         },
       ],
     });
-    const product = productData.map({ plain: true});
-    res.render('products', { product });
+    const product = productData.map({ plain: true });
+    console.log(product)
+    res.render("products", { product });
   } catch (err) {
     res.status(500).json(err);
   }
