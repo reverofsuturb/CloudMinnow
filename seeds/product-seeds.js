@@ -45,9 +45,60 @@ const productData = [
   {
     product_name: "Dog Treat - Peanut Butter",
     product_description: "",
-    price: 229.99,
+    price: 9.99,
     filename: "06-Dog-Treat-Peanut-Butter.jpg",
     stock: 122,
+    species_id: 1,
+  },
+  {
+    product_name: "Natural Teaser Cat Toys",
+    product_description:
+      "Interact with your cat while satisfying her natural instinct to hunt",
+    price: 9.99,
+    filename: "07-Natural-Teaser-Cat-Toys.jpg",
+    stock: 5,
+    species_id: 2,
+  },
+  {
+    product_name: "Sandwich Dog Toy",
+    product_description:
+      "Plush Sandwich Dog Toy is a plush toy that provides companionship and comfort",
+    price: 9.99,
+    filename: "08-Sandwich-Dog-Toy.jpg",
+    stock: 20,
+    species_id: 1,
+  },
+  {
+    product_name: "Robotic Bug Cat Toy",
+    product_description: "Allows for interactive pet playtime",
+    price: 6.99,
+    filename: "09-Robotic-Bug-Cat-Toy.jpg",
+    stock: 30,
+    species_id: 2,
+  },
+  {
+    product_name: "3-in1 Dog Stroller",
+    product_description: "Multi-use carrier ideal for disabled or senior pets",
+    price: 99.99,
+    filename: "10-3-in1-Pet-Stroller.jpg",
+    stock: 8,
+    species_id: 1,
+  },
+  {
+    product_name: "Peek-a-Prize Toy Box Cat Toy",
+    product_description: "Stimulates a cat's desire to hunt and play",
+    price: 19.99,
+    filename: "11-Peek-a-Prize-Toy-Box-Cat-Toy",
+    stock: 9,
+    species_id: 2,
+  },
+  {
+    product_name: "Baseball Dog Cap",
+    product_description:
+      "Blue Baseball Cap makes a great fashion choice for your furry friend",
+    price: 9.99,
+    filename: "12-Baseball-Dog-Cap.jpg",
+    stock: 12,
     species_id: 1,
   },
 ];
