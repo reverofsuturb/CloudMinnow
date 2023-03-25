@@ -88,7 +88,7 @@ const productData = [
     product_name: "Peek-a-Prize Toy Box Cat Toy",
     product_description: "Stimulates a cat's desire to hunt and play",
     price: 19.99,
-    filename: "11-Box-Cat-Toy",
+    filename: "11-Box-Cat-Toy.jpg",
     stock: 9,
     species_id: 2,
   },
