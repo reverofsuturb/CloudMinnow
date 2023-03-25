@@ -42,13 +42,15 @@ router.get("/products", async (req, res) => {
           include: { model: Animal },
         },
       ],
-    });
-    const product = productData.map({ plain: true });
-    console.log(product)
-    res.render("products", { product });
+});
+    const products = productData.map((product) =>
+    product.get({ plain: true })
+    );
+    res.render('products', { products });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
