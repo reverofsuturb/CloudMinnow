@@ -3,7 +3,6 @@ const seedProduct = require("./product-seeds");
 const seedSpecies = require("./Species-seeds");
 const seedUser = require("./user-seeds");
 const seedAnimal = require("./animal-seeds");
-const seedImages = require("./images-seeds")
 
 const seedFluffy = async () => {
   await sequelize.sync({ force: true });
