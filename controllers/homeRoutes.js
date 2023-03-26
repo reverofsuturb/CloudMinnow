@@ -66,7 +66,7 @@ try {
   }
 });
 
-// product page order options by price, name, stock ascending and descending
+// product page order options by price, name, stock ascending and descending, dog or cat
 router.get('/products/sortbyPriceASC', async (req, res) => {
   try {
       const productData = await Product.findAll({
@@ -192,6 +192,53 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
               res.status(500).json(err);
             }
           });
+
+          router.get('/products/sortbyDog', async (req, res) => {
+            try {
+                const productData = await Product.findAll({
+                  where: {
+                    species_id: 1,
+                  }, 
+                  include: [
+                    {
+                      model: Species,
+                      required: false,
+                      include: { model: Animal },
+                    },
+                  ],
+            });
+                const products = productData.map((product) =>
+                product.get({ plain: true })
+                );
+                res.render('products', { products });
+              } catch (err) {
+                res.status(500).json(err);
+              }
+            });
+
+            
+          router.get('/products/sortbyCat', async (req, res) => {
+            try {
+                const productData = await Product.findAll({
+                  where: {
+                    species_id: 2,
+                  }, 
+                  include: [
+                    {
+                      model: Species,
+                      required: false,
+                      include: { model: Animal },
+                    },
+                  ],
+            });
+                const products = productData.map((product) =>
+                product.get({ plain: true })
+                );
+                res.render('products', { products });
+              } catch (err) {
+                res.status(500).json(err);
+              }
+            });
 
 module.exports = router;
 
