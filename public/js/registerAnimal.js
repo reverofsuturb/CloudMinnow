@@ -11,10 +11,7 @@ const registerAnimal = async (event) => {
   const animalDescription = document.querySelector(
     "#animaldescription-input-register"
   ).value;
-  console.log(animalName);
-  console.log(animalAge);
-  console.log(animalSpecies);
-  console.log(animalDescription);
+
   // post to /api/animals/ to fetch response
   const registerAnimalRequest = await fetch("/api/animal", {
     method: "POST",
@@ -23,7 +20,6 @@ const registerAnimal = async (event) => {
       age: animalAge,
       species_id: animalSpecies,
       description: animalDescription,
-      user_id: this.user.id,
     }),
     headers: { "Content-Type": "application/json" },
   });
