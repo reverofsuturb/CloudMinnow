@@ -50,7 +50,7 @@ router.post("/", async (req, res) => {
       password: req.body.password,
       has_pets: req.body.has_pets,
     });
-console.log(newUser);
+    console.log(newUser);
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = req.body.username;
