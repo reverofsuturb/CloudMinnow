@@ -1,131 +1,109 @@
-<div class="ui two column grid" id="profile">
+<section class="profile-bg">
 
+  <div class="ui two column grid" id="profile">
 
-
-<button class="ui button active" id="new-pet">Add new pet</button>
-    <div class="ui modal">
-        <div class="header">Add New Pet</div>
+    <div class="column" id="left-prof-col">
+      <div class="row">
+        <div class="ui raised segment">
+          <a class="ui ribbon label" id="ribbon-1">Overview</a>
+          <span>{{username}}</span>
+          <span>{{email}}</span>
+          <p>Test</p>
+          <a class="ui ribbon label" id="ribbon-2">Community</a>
+          <p>Test</p>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <button class="ui button active" id="new-pet">Add new pet</button>
+          <div class="ui modal">
+            <div class="header">Add New Pet</div>
             <div class="content">
-                <form id="registeranimal-form" class="ui form">
-                    <div class="field">
-                    <label>Pet Name</label>
-                    <input id="animalname-input-register" type="text" name="pet-name" placeholder="Pet Name">
-                    </div>
+              <form id="registeranimal-form" class="ui form">
                 <div class="field">
-            <label>Pet Age</label>
-        <input id="animalage-input-register" type="text" name="pet-age" placeholder="Pet Age">
-    </div>
-<div class="field">
-    <label>Type of Pet (please select)</label>
-        <div class="ui fluid selection dropdown" id="dropdown">
-            <input id="animalspecies-input-register" type="hidden" name="Type of Pet">
-            <i class="dropdown icon"></i>
-            <div class="default text">Type of Pet</div>
-            <div class="menu">
-            <div class="item" data-value="1">Dog</div>
-            <div class="item" data-value="0">Cat</div>
-        </div>
-    </div>
-</div>
-<div class="field">
-    <label>Write Something About Your Pet</label>
-        <input id="animaldescription-input-register" type="text" name="pet-Bio" placeholder="Pet Bio">
-    </div>
-    <div class="field">
-        <label>Pet Photo JPEG</label>
-        <input type="text" name="pet-photo" placeholder="Pet Photo (optional)">
-    </div>
-        <button class="ui button" type="submit">Submit</button>
-        </form>
-    </div>
-    </div>
-</div>
-
-
-
-
-        <div class="center aligned column" id="right-prof-col">
-            <div class="ui container">
-                <div class="ui people shape">
-                    <div class="sides ">
-                        <div class="active side">
-                            <div class="ui card">
-                                <div class="image">
-                                    <img src="https://i.imgur.com/hT7JMzF.jpg">
-                                </div>
-                                <div class="content left aligned">
-                                    <div class="ui ribbon label left aligned" id="name-age">Henry (11)</div>
-                                    <div class="meta">
-                                        <a>Take me to Cat Products</a>
-                                    </div>
-                                    <div class="description">
-                                        Loves to drool when pet and bite.
-                                    </div>
-                                </div>
-                                <div class="extra content">
-                                    <span class="right floated">
-                                        Joined in 2014
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <div class="ui card">
-                                <div class="image">
-                                    <img src="https://i.imgur.com/H1nxniL.jpg">
-                                </div>
-                                <div class="content left aligned">
-                                    <a class="ui ribbon label" id="name-age">Clark (2)</a>
-                                    <div class="meta">
-                                        <a>Take me to Dog Products</a>
-                                    </div>
-                                    <div class="description">
-                                        Loves to bark, has short legs.
-                                    </div>
-                                </div>
-                                <div class="extra content">
-                                    <span class="right floated">
-                                        Joined in 2021
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <div class="ui card">
-                                <div class="image">
-                                    <img src="https://i.imgur.com/Frxg6Qo.jpg">
-                                </div>
-                                <div class="content left aligned">
-                                    <a class="ui ribbon label" id="name-age">Mogli (12)</a>
-                                    <div class="meta">
-                                        <a>Take me to Cat Products</a>
-                                    </div>
-                                    <div class="description">
-                                        Anything for extra snacks.
-                                    </div>
-                                </div>
-                                <div class="extra content">
-                                    <span class="right floated">
-                                        Joined in 2013
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                  <label>Pet Name</label>
+                  <input
+                    id="animalname-input-register"
+                    type="text"
+                    name="pet-name"
+                    placeholder="Pet Name"
+                  />
+                </div>
+                <div class="field">
+                  <label>Pet Age</label>
+                  <input
+                    id="animalage-input-register"
+                    type="text"
+                    name="pet-age"
+                    placeholder="Pet Age"
+                  />
+                </div>
+                <div class="field">
+                  <label>Type of Pet (please select)</label>
+                  <div class="ui fluid selection dropdown" id="dropdown">
+                    <input
+                      id="animalspecies-input-register"
+                      type="hidden"
+                      name="Type of Pet"
+                    />
+                    <i class="dropdown icon"></i>
+                    <div class="default text">Type of Pet</div>
+                    <div class="menu">
+                      <div class="item" data-value="1">Dog</div>
+                      <div class="item" data-value="0">Cat</div>
                     </div>
+                  </div>
                 </div>
-                <div class="ui container" id="prof-buttons">
-                    <ui class="grid">
-                        <div class="row">
-                            <div class="colunm">
-                                <button class="ui button" id="rollback_left"><i class="angle left icon"></i></button>
-                                <button class="ui button" id="rollback_right"><i class="angle right icon"></i></button>
-                            </div>
-                        </div>
-                    </ui>
+                <div class="field">
+                  <label>Write Something About Your Pet</label>
+                  <input
+                    id="animaldescription-input-register"
+                    type="text"
+                    name="pet-Bio"
+                    placeholder="Pet Bio"
+                  />
                 </div>
+                <div class="field">
+                  <label>Pet Photo JPEG</label>
+                  <input
+                    type="text"
+                    name="pet-photo"
+                    placeholder="Pet Photo (optional)"
+                  />
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+              </form>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
 
-    <script src="/js/registerAnimal.js"></script>
+    <div class="center aligned column" id="right-prof-col">
+      <div class="ui people shape">
+        <div class="sides">
+            {{#each animals as |animal|}}
+            {{> profilePet}}
+            {{/each}}
+          <div class="ui container" id="prof-buttons">
+            <ui class="grid">
+              <div class="row">
+                <div class="column">
+                  <button class="ui button" id="rollback_left"><i
+                      class="angle left icon"
+                    ></i></button>
+                  <button class="ui button" id="rollback_right"><i
+                      class="angle right icon"
+                    ></i></button>
+                </div>
+              </div>
+            </ui>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="/js/registerAnimal.js"></script>

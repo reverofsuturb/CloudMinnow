@@ -33,7 +33,7 @@
 .profile-bg {
   display: flex;
   flex-wrap: wrap;
-  background-image: url(./assets/images/pet-photos/pet-accessories/top-view-pet-food-with-toys.jpg);
+  background-image: url(../images/pet-photos/pet-accessories/various-items.jpg);
   background-size: contain;
   /* background-position: left; */
   /* background-repeat: no-repeat; */
@@ -119,8 +119,15 @@
 }
 
 #login {
-  background-color: var(--medium-light-3);
+  background-color: var(--light-1);
   font-size: 15px;
+}
+
+#log-reg {
+  height: 100vh;
+  background-image: url(../images/pet-photos/Animals/group-portrait-puppies.jpg);
+  background-position: bottom;
+  background-size: contain;
 }
 
 .footer {
@@ -169,13 +176,12 @@
 .product-page {
   display: flex;
   flex-wrap: wrap;
+  background-image: url(../images/pet-photos/pet-accessories/pet-accessories-objects.jpg);
+  background-size: contain;
+  background-position: left;
 }
 
 .products {
-  background-color: var(--medium-light-2);
-  background-image: url(../images/pet-photos/pet-accessories/bowls-dry-food-water.jpg);
-  background-size: contain;
-  background-position: left;
   /* background-repeat: no-repeat; */
   padding: 20px;
 }
@@ -275,9 +281,9 @@
   }
 }
 
-  .hidden{
-    display: none;
-  }
+.hidden {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   #profile {
