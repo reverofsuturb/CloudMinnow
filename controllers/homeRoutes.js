@@ -2,11 +2,12 @@ const router = require('express').Router();
 const { Animal, Product, User, Species } = require("./../models");
 const withAuth = require("./../utils/auth");
 
-
+// homepage
 router.get('/', async (req, res) => {
 res.render('landing')
 });
 
+// profile page pulling animal so that pet data can populate
 router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.userId, {
@@ -39,10 +40,12 @@ router.get('/profile', withAuth, async (req, res) => {
 
 });
 
+// user log in page
 router.get('/login', async (req, res) => {
 res.render('login-register')
 });
 
+// product page
 router.get('/products', async (req, res) => {
 try {
     const productData = await Product.findAll({
@@ -63,5 +66,132 @@ try {
   }
 });
 
+// product page order options by price, name, stock ascending and descending
+router.get('/products/sortbyPriceASC', async (req, res) => {
+  try {
+      const productData = await Product.findAll({
+        order: [[ 'price', 'ASC' ]], 
+        include: [
+          {
+            model: Species,
+            required: false,
+            include: { model: Animal },
+          },
+        ],
+  });
+      const products = productData.map((product) =>
+      product.get({ plain: true })
+      );
+      res.render('products', { products });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
+router.get('/products/sortbyPriceDESC', async (req, res) => {
+  try {
+      const productData = await Product.findAll({
+        order: [[ 'price', 'DESC' ]], 
+        include: [
+          {
+            model: Species,
+            required: false,
+            include: { model: Animal },
+          },
+        ],
+  });
+      const products = productData.map((product) =>
+      product.get({ plain: true })
+      );
+      res.render('products', { products });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
+  router.get('/products/sortbyNameASC', async (req, res) => {
+    try {
+        const productData = await Product.findAll({
+          order: [[ 'product_name', 'ASC' ]], 
+          include: [
+            {
+              model: Species,
+              required: false,
+              include: { model: Animal },
+            },
+          ],
+    });
+        const products = productData.map((product) =>
+        product.get({ plain: true })
+        );
+        res.render('products', { products });
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    });
+
+    router.get('/products/sortbyNameDESC', async (req, res) => {
+      try {
+          const productData = await Product.findAll({
+            order: [[ 'product_name', 'DESC' ]], 
+            include: [
+              {
+                model: Species,
+                required: false,
+                include: { model: Animal },
+              },
+            ],
+      });
+          const products = productData.map((product) =>
+          product.get({ plain: true })
+          );
+          res.render('products', { products });
+        } catch (err) {
+          res.status(500).json(err);
+        }
+      });
+
+      router.get('/products/sortbyStockASC', async (req, res) => {
+        try {
+            const productData = await Product.findAll({
+              order: [[ 'stock', 'ASC' ]], 
+              include: [
+                {
+                  model: Species,
+                  required: false,
+                  include: { model: Animal },
+                },
+              ],
+        });
+            const products = productData.map((product) =>
+            product.get({ plain: true })
+            );
+            res.render('products', { products });
+          } catch (err) {
+            res.status(500).json(err);
+          }
+        });
+
+        router.get('/products/sortbyStockDESC', async (req, res) => {
+          try {
+              const productData = await Product.findAll({
+                order: [[ 'stock', 'DESC' ]], 
+                include: [
+                  {
+                    model: Species,
+                    required: false,
+                    include: { model: Animal },
+                  },
+                ],
+          });
+              const products = productData.map((product) =>
+              product.get({ plain: true })
+              );
+              res.render('products', { products });
+            } catch (err) {
+              res.status(500).json(err);
+            }
+          });
 
 module.exports = router;
+
