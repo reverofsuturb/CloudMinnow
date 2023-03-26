@@ -123,6 +123,11 @@
   font-size: 15px;
 }
 
+#userLogout {
+  background-color: var(--light-1);
+  font-size: 15px;
+}
+
 #log-reg {
   height: 100vh;
   background-image: url(../images/pet-photos/Animals/group-portrait-puppies.jpg);

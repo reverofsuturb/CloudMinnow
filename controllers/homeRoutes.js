@@ -4,7 +4,7 @@ const withAuth = require("./../utils/auth");
 
 // homepage
 router.get('/', async (req, res) => {
-res.render('landing')
+res.render('landing', { loggedIn: req.session.loggedIn })
 });
 
 // profile page pulling animal so that pet data can populate
@@ -33,7 +33,7 @@ router.get('/profile', withAuth, async (req, res) => {
     }
     const user = userData.get({ plain: true });
     console.log(userData)
-    res.render('profile', { user, userId: req.session.userId })
+    res.render('profile', { user, loggedIn: req.session.loggedIn })
   } catch (err) {
     res.status(500).json(err);
   }
@@ -42,7 +42,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 // user log in page
 router.get('/login', async (req, res) => {
-res.render('login-register')
+res.render('login-register', { loggedIn: req.session.loggedIn })
 });
 
 // product page
@@ -60,7 +60,7 @@ try {
     const products = productData.map((product) =>
     product.get({ plain: true })
     );
-    res.render('products', { products });
+    res.render('products', { products, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -82,7 +82,7 @@ router.get('/products/sortbyPriceASC', async (req, res) => {
       const products = productData.map((product) =>
       product.get({ plain: true })
       );
-      res.render('products', { products });
+      res.render('products', { products, loggedIn: req.session.loggedIn });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -103,7 +103,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
       const products = productData.map((product) =>
       product.get({ plain: true })
       );
-      res.render('products', { products });
+      res.render('products', { products, loggedIn: req.session.loggedIn });
     } catch (err) {
       res.status(500).json(err);
     }
@@ -124,7 +124,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
         const products = productData.map((product) =>
         product.get({ plain: true })
         );
-        res.render('products', { products });
+        res.render('products', { products, loggedIn: req.session.loggedIn });
       } catch (err) {
         res.status(500).json(err);
       }
@@ -145,7 +145,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
           const products = productData.map((product) =>
           product.get({ plain: true })
           );
-          res.render('products', { products });
+          res.render('products', { products, loggedIn: req.session.loggedIn });
         } catch (err) {
           res.status(500).json(err);
         }
@@ -166,7 +166,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
             const products = productData.map((product) =>
             product.get({ plain: true })
             );
-            res.render('products', { products });
+            res.render('products', { products,  loggedIn: req.session.loggedIn });
           } catch (err) {
             res.status(500).json(err);
           }
@@ -187,7 +187,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
               const products = productData.map((product) =>
               product.get({ plain: true })
               );
-              res.render('products', { products });
+              res.render('products', { products,  loggedIn: req.session.loggedIn });
             } catch (err) {
               res.status(500).json(err);
             }
@@ -210,7 +210,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
                 const products = productData.map((product) =>
                 product.get({ plain: true })
                 );
-                res.render('products', { products });
+                res.render('products', { products,  loggedIn: req.session.loggedIn });
               } catch (err) {
                 res.status(500).json(err);
               }
@@ -234,7 +234,7 @@ router.get('/products/sortbyPriceDESC', async (req, res) => {
                 const products = productData.map((product) =>
                 product.get({ plain: true })
                 );
-                res.render('products', { products });
+                res.render('products', { products,  loggedIn: req.session.loggedIn });
               } catch (err) {
                 res.status(500).json(err);
               }
