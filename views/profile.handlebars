@@ -6,8 +6,8 @@
       <div class="row">
         <div class="ui raised segment">
           <a class="ui ribbon label" id="ribbon-1">Overview</a>
-          <span>{{username}}</span>
-          <span>{{email}}</span>
+          <span>{{user.username}}</span>
+          <span>{{user.email}}</span>
           <p>Test</p>
           <a class="ui ribbon label" id="ribbon-2">Community</a>
           <p>Test</p>
@@ -82,7 +82,7 @@
     <div class="center aligned column" id="right-prof-col">
       <div class="ui people shape">
         <div class="sides">
-            {{#each animals as |animal|}}
+            {{#each user.animals as |animal|}}
             {{> profilePet}}
             {{/each}}
           <div class="ui container" id="prof-buttons">
