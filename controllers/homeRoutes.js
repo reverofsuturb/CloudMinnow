@@ -12,6 +12,14 @@ router.get("/profile", withAuth, async (req, res) => {
       include: [
         {
           model: Animal,
+          attributes: [
+            'id',
+            'name',
+            'age',
+            'description',
+            'user_id',
+            'species_id',
+          ],
           required: false,
           include: { model: Species },
         },
@@ -21,8 +29,9 @@ router.get("/profile", withAuth, async (req, res) => {
       res.status(404).json({ message: "No user with that id" });
       return;
     }
-    const user = userData.get({ plain: true });
+
     res.render("profile", { user, loggedIn: req.session.loggedIn });
+
   } catch (err) {
     res.status(500).json(err);
   }
