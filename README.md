@@ -2,7 +2,7 @@
 
 ## Description
 
-Fluffy is a full stack web application where a user can register a pet, and browse in a product database with many different items. You can select products and add them to a purchasing cart, while maintaining a record of a user’s purchase history. This application also utilizes request authentication to have access to the main functionality.
+Fluffy is a full stack web application which allows a user to register a pet, and browse in a product database with many different items. You can select products and add them to a purchasing cart, while maintaining a record of a user’s purchase history. This application also utilizes request authentication to have access to the main functionality.
 
 ---
 
@@ -14,7 +14,6 @@ Fluffy is a full stack web application where a user can register a pet, and brow
 - [License](#fluffy-license-mit)
 - [Links](#links)
 - [Contributing](#contributing)
-
 
 ---
 
@@ -35,15 +34,15 @@ Deployed using Heroku (with data)
 
 **To accomplish this challenge, the following tasks were completed:**
 
-    -Brain storming to define the project main concept.
-    -Define the purpose, and concept of the application.
-    -Define the team members roles.
-    -Define MVPs (Minimum Viable Products) and due dates.
-    -Create sketches.
-    -Define the routes, requests and responses structure.
-    -Front end and back end coding.
-    -Integrate full stack application.
-    -Final review and proper documentation.
+    Brain storming to define the project main concept.
+    Define the purpose, and concept of the application.
+    Define the team members roles.
+    Define MVPs (Minimum Viable Products) and due dates.
+    Create sketches.
+    Define the routes, requests and responses structure.
+    Front end and back end coding.
+    Integrate full stack application.
+    Final review and proper documentation.
 
 ## Installation
 
@@ -80,8 +79,8 @@ git clone [clone link from GitHub]
 
 ## Contributing
 
-    Samuel Friedman
-    Wesley Palov
     Carter White
-    Travis Hackbarth
+    Wesley Palov
+    Samuel Friedman
     Emma Cunningham
+    Travis Hackbarth
