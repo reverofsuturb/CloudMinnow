@@ -4,12 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fluffy</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/public/images/logo/favicon-64.png"
-    />
-   
+    <link rel="icon" type="image/x-icon" href="/images/logo/favicon-64.png" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
@@ -17,17 +13,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   </head>
   <body>
 
     <!-- Nav Section -->
     <header class="header">
       <nav class="navbar">
-        <a href="#" class="nav-logo"><img
+        <a href="/" class="nav-logo"><img
             src="/images/logo/fluffy.PNG"
             alt=""
-          /></a>
+          />
+          <p id="logo-tag">Stay Fluffy</p></a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="/" class="nav-link">Home</a>
@@ -36,16 +33,16 @@
             <a href="/products" class="nav-link">Products</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Profile</a>
+            <a href="/login" class="nav-link">Profile</a>
           </li>
           <li class="nav-item">
             <div class="item">
-              <div class="ui button" id="sign-up">Sign Up</div>
+              <a href="/login"><div class="ui button" id="sign-up">Sign Up</div></a>
             </div>
           </li>
           <li class="nav-item">
             <div class="item">
-              <div class="ui button" id="login">Login</div>
+              <a href="/login"><div class="ui button" id="login">Login</div></a>
             </div>
           </li>
         </ul>
@@ -56,16 +53,14 @@
         </div>
       </nav>
     </header>
-
     <section id="divider"></section>
 
     {{{body}}}
 
     <!-- Footer Section -->
-    <section id="divider"></section>
     <section class="footer">
       <div class="ui left aligned grid">
-        <div class="eight wide column"><a href="/home">Home</a>
+        <div class="eight wide column"><a href="/">Home</a>
           <ul class="socials">
             <li><a href="#"><i class="twitter icon"></i></a></li>
             <li><a href="#"><i class="facebook icon"></i></a></li>

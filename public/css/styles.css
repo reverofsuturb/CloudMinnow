@@ -33,7 +33,7 @@
 .profile-bg {
   display: flex;
   flex-wrap: wrap;
-  background-image: url(./assets/images/pet-photos/pet-accessories/top-view-pet-food-with-toys.jpg);
+  background-image: url(../images/pet-photos/pet-accessories/various-items.jpg);
   background-size: contain;
   /* background-position: left; */
   /* background-repeat: no-repeat; */
@@ -42,10 +42,10 @@
 .navbar {
   background-color: var(--dark);
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2.5rem;
+  border-bottom: 3px solid var(--medium-light-3);
 }
 
 .nav-menu {
@@ -70,9 +70,21 @@
 }
 
 .nav-logo {
-  font-size: 2.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--medium-light-3);
+}
+
+.nav-logo img {
+  width: 21rem;
+  height: 5rem;
+  border: 2px solid var(--medium-light-3);
+  border-radius: 15px;
+}
+
+#logo-tag {
+  text-align: center;
+  font-size: 15p;
 }
 
 .nav-logo:hover {
@@ -107,16 +119,27 @@
 }
 
 #login {
-  background-color: var(--medium-light-3);
+  background-color: var(--light-1);
   font-size: 15px;
 }
 
+#log-reg {
+  height: 100vh;
+  background-image: url(../images/pet-photos/Animals/group-portrait-puppies.jpg);
+  background-position: bottom;
+  background-size: contain;
+}
+
 .footer {
+  position: relative;
+  bottom: 0;
+  /* width: 100%; */
   height: 100px;
   padding-top: 10px;
   padding-left: 25px;
   padding-right: 25px;
-  background-color: var(--dark);
+  background-image: linear-gradient(180deg, var(--dark) 0%, var(--darkest) 95%);
+  border-top: 3px solid var(--medium-light-3);
 }
 
 #ribbon-1 {
@@ -150,18 +173,28 @@
   display: inline;
 }
 
-.products {
-  background-color: var(--medium-light-2);
-  background-image: url(../images/pet-photos/pet-accessories/pet-accessories-treats.jpg);
+.product-page {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url(../images/pet-photos/pet-accessories/pet-accessories-objects.jpg);
   background-size: contain;
   background-position: left;
-  background-repeat: no-repeat;
+}
+
+.products {
+  /* background-repeat: no-repeat; */
   padding: 20px;
 }
 
 #products {
+  margin: 0px;
   display: flex;
   justify-content: center;
+}
+
+#prod-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #prod-cards {
@@ -187,6 +220,11 @@
   margin-top: 10px;
 }
 
+#filter-menu {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .landing {
   background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib);
   height: 100%;
@@ -196,11 +234,17 @@
   background-position: center;
 }
 
+@media screen and (max-width: 1490px) {
+  .product-page {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 6rem;
+    top: 7.2rem;
     flex-direction: column;
     background-color: var(--medium-1);
     width: 100%;
@@ -237,6 +281,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   #profile {
     flex-direction: column;
@@ -247,7 +295,9 @@
   #right-prof-col {
     order: 0;
   }
-
+  #right-prof-col img {
+    /* min-width: 100%; */
+  }
   #left-prof-col {
     order: 1;
   }
