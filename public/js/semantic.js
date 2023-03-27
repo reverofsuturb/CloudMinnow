@@ -26,7 +26,6 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-<<<<<<< HEAD
 // Register new pet modal
 $("#new-pet").on("click", function () {
   $(".ui.modal").modal("show");
@@ -46,28 +45,25 @@ $("#filter").popup({
     show: 300,
     hide: 800,
   },
-=======
-for (let i = 0; i < 100; i++) {
-  let id = `add-${i}`;
-  let add = ('#' + id);
-  let hiddenId = `hidden-${i}`;
-  let show = ('#' + hiddenId);
-
-  $(add).on("click", function () {
-    $(show).removeClass("hidden")
-  })
-}
-
-  
-$('#new-pet').on('click', function() {
-  $('.ui.modal')
-  .modal('show');
 });
 
-$('#cart').on("click", function() {
-  $('.ui.sidebar')
-  .sidebar('toggle')
->>>>>>> main
+for (let i = 0; i < 100; i++) {
+  let id = `add-${i}`;
+  let add = "#" + id;
+  let hiddenId = `hidden-${i}`;
+  let show = "#" + hiddenId;
+
+  $(add).on("click", function () {
+    $(show).removeClass("hidden");
+  });
+}
+
+$("#new-pet").on("click", function () {
+  $(".ui.modal").modal("show");
+});
+
+$("#cart").on("click", function () {
+  $(".ui.sidebar").sidebar("toggle");
 });
 
 // Nav functions
