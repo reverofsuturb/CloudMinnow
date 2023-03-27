@@ -288,7 +288,11 @@
 }
 
 #cart {
-  padding-left: 40px;
+  color: var(--light-2);
+}
+
+#cart:hover {
+  color: var(--medium-light-3);
 }
 
 #cart-menu {
