@@ -23,7 +23,6 @@ const registerAnimal = async (event) => {
     }),
     headers: { "Content-Type": "application/json" },
   });
-  console.log(registerAnimalRequest);
   if (registerAnimalRequest.ok) {
     document.location.replace("/profile");
   } else {
