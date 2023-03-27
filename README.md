@@ -75,7 +75,7 @@ git clone [clone link from GitHub]
  <https://github.com/reverofsuturb/CloudMinnow>
 
  **Heroku link:**
-  "TO BE INCLUDED"
+  <https://enigmatic-falls-71377.herokuapp.com/>
 
 ## Contributing
 
