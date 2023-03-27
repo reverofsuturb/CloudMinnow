@@ -17,28 +17,7 @@
   box-sizing: border-box;
 }
 
-#profile {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#prof-buttons {
-  margin-top: 25px;
-}
-
-.profile-bg {
-  display: flex;
-  flex-wrap: wrap;
-  background-image: url(../images/pet-photos/pet-accessories/various-items.jpg);
-  background-size: contain;
-  /* background-position: left; */
-  /* background-repeat: no-repeat; */
-}
-
+/* ================== NAV BAR SECTION ================== */
 .navbar {
   background-color: var(--dark);
   display: flex;
@@ -66,6 +45,7 @@
 }
 
 .nav-link:hover {
+  text-decoration: underline solid 3px var();
   color: var(--medium-light-3);
 }
 
@@ -105,29 +85,36 @@
   background-color: var(--light-1);
 }
 
-/* #nav-bar {
-  background-color: var(--dark);
-}
-
-#nav-bar a {
-  font-size: 20px;
-} */
-
 #sign-up {
+  border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
 }
 
 #login {
+  border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
 }
 
 #userLogout {
+  border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
 }
 
+/* ================== TOP DIVIDER ================== */
+#divider {
+  height: 30px;
+  background-color: var(--light-2);
+  background-image: linear-gradient(
+    180deg,
+    var(--light-2) 10%,
+    var(--darkest) 100%
+  );
+}
+
+/* ================== LOGIN SECTION ================== */
 #log-reg {
   height: 100vh;
   background-image: url(../images/pet-photos/Animals/group-portrait-puppies.jpg);
@@ -136,10 +123,66 @@
   background-repeat: no-repeat;
 }
 
+/* ================== PROFILE SECTION ================== */
+#profile {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#prof-buttons {
+  margin-top: 15px;
+}
+
+.profile-bg {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #b7dbe0;
+  background-image: url(../images/pet-photos/pet-accessories/present-bone-bowl.jpg);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+#ribbon-1 {
+  background-color: var(--light-2);
+}
+
+#name-age {
+  font-size: 20px;
+  background-color: var(--light-1);
+  color: var(--medium-2);
+}
+
+#rollback_left {
+  background-color: var(--medium-2);
+  color: var(--light-1);
+}
+
+#rollback_right {
+  background-color: var(--medium-2);
+  color: var(--light-1);
+}
+
+#new-bio {
+  margin-bottom: 10px;
+  background-color: var(--medium-2);
+  color: var(--light-1);
+}
+
+#new-pet {
+  margin-top: 10px;
+  background-color: var(--medium-2);
+  color: var(--light-1);
+}
+
+/* ================== FOOTER SECTION ================== */
 .footer {
   position: relative;
   bottom: 0;
-  /* width: 100%; */
   height: 100px;
   padding-top: 10px;
   padding-left: 25px;
@@ -148,40 +191,14 @@
   border-top: 3px solid var(--medium-light-3);
 }
 
-#ribbon-1 {
-  background-color: var(--light-2);
-}
-
-#ribbon-2 {
-  background-color: var(--medium-1);
-  color: var(--light-1);
-}
-
-#name-age {
-  font-size: 20px;
-  background-color: var(--medium-light-1);
-}
-
-#rollback_left {
-  background-color: var(--medium-light-1);
-}
-
-#rollback_right {
-  background-color: var(--medium-light-1);
-}
-
-#divider {
-  height: 30px;
-  background-color: var(--light-2);
-  background-image: linear-gradient(180deg, var(--light-2) 10%, var(--darkest) 100%);
-}
-
 .socials li {
   display: inline;
 }
 
+/* ================== PRODUCT SECTION ==================*/
 .product-page {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   background-image: url(../images/pet-photos/pet-accessories/pet-accessories-objects.jpg);
   background-size: contain;
@@ -189,7 +206,6 @@
 }
 
 .products {
-  /* background-repeat: no-repeat; */
   padding: 20px;
 }
 
@@ -207,6 +223,13 @@
 #prod-cards {
   height: 200px;
   width: 200px;
+  color: var(--darkest);
+}
+
+#filter {
+  margin-top: 10px;
+  display: flex;
+  background-color: var(--light-1);
 }
 
 .ui.inverted.button {
@@ -215,6 +238,7 @@
 
 #modal-price {
   font-size: 25px;
+  color: var(--darkest);
 }
 
 #have-pets {
@@ -227,11 +251,7 @@
   margin-top: 10px;
 }
 
-#filter-menu {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
+/* ================== LANDING SECTION ================== */
 .landing {
   background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib);
   height: 100%;
@@ -239,7 +259,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}  
+}
 
 #password {
   padding-bottom: 10px;
@@ -254,9 +274,21 @@
   border-radius: 5px;
   background-color: var(--medium-light-1);
   background-image: var(--medium-light-1);
-  background-image: -moz-linear-gradient(top, #fff 0%, var(--medium-light-1) 100%); 
-  background-image: -webkit-linear-gradient(top, #fff 0%,var(--medium-light-1) 100%); 
-  background-image: linear-gradient(to bottom, #fff 0%,var(--medium-light-1) 100%); 
+  background-image: -moz-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -273,9 +305,21 @@
   border-radius: 5px;
   background-color: var(--medium-light-1);
   background-image: var(--medium-light-1);
-  background-image: -moz-linear-gradient(top, #fff 0%, var(--medium-light-1) 100%); 
-  background-image: -webkit-linear-gradient(top, #fff 0%,var(--medium-light-1) 100%); 
-  background-image: linear-gradient(to bottom, #fff 0%,var(--medium-light-1) 100%); 
+  background-image: -moz-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -299,7 +343,7 @@
   float: right;
 }
 
-.wrapper{
+.wrapper {
   height: 0;
   overflow: hidden;
   transition: height 0.66s ease-out;
@@ -372,7 +416,7 @@
   }
   /* #right-prof-col img {
     /* min-width: 100%; */
-  /* } */ 
+  /* } */
   #left-prof-col {
     order: 1;
   }
