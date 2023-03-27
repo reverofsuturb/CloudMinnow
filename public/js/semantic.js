@@ -7,8 +7,10 @@ $("#rollback_right").click(function () {
   $(".ui.shape").shape("flip right");
 });
 
+//Dropdown for modals
 $("#dropdown").dropdown();
 
+//Product card animation
 $(".special.cards .image").dimmer({
   on: "hover",
 });
