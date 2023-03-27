@@ -1,6 +1,8 @@
+// Arrow button functions to change pet profiles
 $("#rollback_left").click(function () {
   $(".ui.shape").shape("flip left");
 });
+
 $("#rollback_right").click(function () {
   $(".ui.shape").shape("flip right");
 });
@@ -22,12 +24,25 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
+// Register new pet modal
 $("#new-pet").on("click", function () {
   $(".ui.modal").modal("show");
 });
 
+// Add to bio modal
 $("#new-bio").on("click", function () {
   $(".ui.modal.2").modal("show");
+});
+
+// Filter popup menu
+$("#filter").popup({
+  inline: true,
+  hoverable: true,
+  position: "bottom left",
+  delay: {
+    show: 300,
+    hide: 800,
+  },
 });
 
 // Nav functions

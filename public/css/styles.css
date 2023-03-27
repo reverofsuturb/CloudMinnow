@@ -35,8 +35,6 @@
   flex-wrap: wrap;
   background-image: url(../images/pet-photos/pet-accessories/various-items.jpg);
   background-size: contain;
-  /* background-position: left; */
-  /* background-repeat: no-repeat; */
 }
 
 .navbar {
@@ -105,14 +103,6 @@
   background-color: var(--light-1);
 }
 
-/* #nav-bar {
-  background-color: var(--dark);
-}
-
-#nav-bar a {
-  font-size: 20px;
-} */
-
 #sign-up {
   background-color: var(--light-1);
   font-size: 15px;
@@ -139,7 +129,6 @@
 .footer {
   position: relative;
   bottom: 0;
-  /* width: 100%; */
   height: 100px;
   padding-top: 10px;
   padding-left: 25px;
@@ -173,7 +162,11 @@
 #divider {
   height: 30px;
   background-color: var(--light-2);
-  background-image: linear-gradient(180deg, var(--light-2) 10%, var(--darkest) 100%);
+  background-image: linear-gradient(
+    180deg,
+    var(--light-2) 10%,
+    var(--darkest) 100%
+  );
 }
 
 .socials li {
@@ -182,6 +175,7 @@
 
 .product-page {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   background-image: url(../images/pet-photos/pet-accessories/pet-accessories-objects.jpg);
   background-size: contain;
@@ -189,7 +183,6 @@
 }
 
 .products {
-  /* background-repeat: no-repeat; */
   padding: 20px;
 }
 
@@ -207,6 +200,13 @@
 #prod-cards {
   height: 200px;
   width: 200px;
+  color: var(--darkest);
+}
+
+#filter {
+  margin-top: 10px;
+  display: flex;
+  background-color: var(--light-1);
 }
 
 .ui.inverted.button {
@@ -215,6 +215,7 @@
 
 #modal-price {
   font-size: 25px;
+  color: var(--darkest);
 }
 
 #have-pets {
@@ -227,11 +228,6 @@
   margin-top: 10px;
 }
 
-#filter-menu {
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
 .landing {
   background-image: url(https://images.unsplash.com/photo-1623387641168-d9803ddd3f35?ixlib);
   height: 100%;
@@ -239,7 +235,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}  
+}
 
 #password {
   padding-bottom: 10px;
@@ -254,9 +250,21 @@
   border-radius: 5px;
   background-color: var(--medium-light-1);
   background-image: var(--medium-light-1);
-  background-image: -moz-linear-gradient(top, #fff 0%, var(--medium-light-1) 100%); 
-  background-image: -webkit-linear-gradient(top, #fff 0%,var(--medium-light-1) 100%); 
-  background-image: linear-gradient(to bottom, #fff 0%,var(--medium-light-1) 100%); 
+  background-image: -moz-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -273,9 +281,21 @@
   border-radius: 5px;
   background-color: var(--medium-light-1);
   background-image: var(--medium-light-1);
-  background-image: -moz-linear-gradient(top, #fff 0%, var(--medium-light-1) 100%); 
-  background-image: -webkit-linear-gradient(top, #fff 0%,var(--medium-light-1) 100%); 
-  background-image: linear-gradient(to bottom, #fff 0%,var(--medium-light-1) 100%); 
+  background-image: -moz-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #fff 0%,
+    var(--medium-light-1) 100%
+  );
   background-size: 2000px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -285,13 +305,6 @@
 #landing-button2:hover {
   background-position: 200%;
   transition: background 300ms ease-in-out;
-}
-
-
-@media screen and (max-width: 1490px) {
-  .product-page {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -348,9 +361,6 @@
   }
   #right-prof-col {
     order: 0;
-  }
-  #right-prof-col img {
-    /* min-width: 100%; */
   }
   #left-prof-col {
     order: 1;

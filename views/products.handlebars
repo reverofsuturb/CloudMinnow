@@ -1,39 +1,45 @@
 <div class="product-page">
-<div class="ui two column grid">
-  <div class="two wide column">
-    <div class="ui vertical menu" id="filter-menu">
-  <div class="item active">
-    <div class="header">Products</div>
-    <div class="menu">
-      <a class="item" href="/products/sortbyPriceASC">Price Ascending</a>
+
+<div class="ui menu" id="filter">
+  <a class="browse item active">
+    Filter Options
+    <i class="dropdown icon"></i>
+  </a>
+</div>
+<div class="ui fluid popup bottom left transition hidden">
+  <div class="ui four column relaxed equal height divided grid">
+    <div class="column">
+      <h4 class="ui header">Products</h4>
+      <div class="ui link list">
+        <a class="item" href="/products/sortbyPriceASC">Price Ascending</a>
       <a class="item" href="/products/sortbyPriceDESC">Price Descending</a>
-    </div>
-  </div>
-      <div class="item">
-      <div class="header">Name</div>
-    <div class="menu">
-      <a class="item" href="/products/sortbyNameASC">Name Ascending</a>
-      <a class="item" href="/products/sortbyNameDESC">Name Descending</a>
-    </div>
       </div>
-<div class="item">
-      <div class="header">Stock</div>
-      <div class="menu">
-      <a class="item" href="/products/sortbyStockASC">Stock Ascending</a>
+    </div>
+    <div class="column">
+      <h4 class="ui header">Name</h4>
+      <div class="ui link list">
+        <a class="item" href="/products/sortbyNameASC">Name Ascending</a>
+      <a class="item" href="/products/sortbyNameDESC">Name Descending</a>
+      </div>
+    </div>
+    <div class="column">
+      <h4 class="ui header">Stock</h4>
+      <div class="ui link list">
+        <a class="item" href="/products/sortbyStockASC">Stock Ascending</a>
       <a class="item" href="/products/sortbyStockDESC">Stock Descending</a>
       </div>
-  </div>
-<div class="item">
-      <div class="header">Animal</div>
-      <div class="menu">
-      <a class="item" href="/products/sortbyDog">Dog Products</a>
+    </div>
+    <div class="column">
+      <h4 class="ui header">Animal</h4>
+      <div class="ui link list">
+       <a class="item" href="/products/sortbyDog">Dog Products</a>
       <a class="item" href="/products/sortbyCat">Cat Products</a>
-    </div>
+      </div>
     </div>
   </div>
-    </div>
-  
-  
+</div>
+
+
 
 
   
@@ -45,9 +51,6 @@
 </div>
 </div>
 </div>
-</div>
-
-
 
   {{#each products as |product|}}
   {{> productsModal}}
