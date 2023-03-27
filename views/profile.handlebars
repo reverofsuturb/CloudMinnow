@@ -5,12 +5,37 @@
     <div class="column" id="left-prof-col">
       <div class="row">
         <div class="ui raised segment">
-          <a class="ui ribbon label" id="ribbon-1">Overview</a>
+          <a class="ui ribbon label" id="ribbon-1">About</a>
           <span>{{user.username}}</span>
           <span>{{user.email}}</span>
-          <p>Test</p>
-          <a class="ui ribbon label" id="ribbon-2">Community</a>
-          <p>Test</p>
+          <h5>Share some information about your pet(s) and what they enjoy, products you have purchased for them, or products you may be on the look out for!</h5>
+{{!-- Bio Info Modal --}}
+        <div>
+          <button class="ui button" id="new-bio">Add Info</button>
+          <div class="ui modal 2">
+            <div class="header">Add Your Info</div>
+            <div class="content">
+              <form id="bio-form" class="ui form">
+                <div class="field">
+                  <label>Info</label>
+                  <input
+                    id="update-user-bio"
+                    type="text"
+                    name="info"
+                    placeholder="info"
+                  />
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    <div class="bio">
+<h5>{{user.biography}}</h5>
+    </div>
+          <a class="ui ribbon label" id="ribbon-2">Pet Notes</a>
+          <p></p>
         </div>
       </div>
       <div class="row">

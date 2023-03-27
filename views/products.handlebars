@@ -2,37 +2,41 @@
 <div class="ui two column grid">
   <div class="two wide column">
     <div class="ui vertical menu" id="filter-menu">
-  <div class="item">
+  <div class="item active">
     <div class="header">Products</div>
     <div class="menu">
-      <a class="item">Enterprise</a>
-      <a class="item">Consumer</a>
+      <a class="item" href="/products/sortbyPriceASC">Price Ascending</a>
+      <a class="item" href="/products/sortbyPriceDESC">Price Descending</a>
     </div>
   </div>
-  <div class="item">
-    <div class="header">CMS Solutions</div>
+      <div class="item">
+      <div class="header">Name</div>
     <div class="menu">
-      <a class="item">Rails</a>
-      <a class="item">Python</a>
-      <a class="item">PHP</a>
+      <a class="item" href="/products/sortbyNameASC">Name Ascending</a>
+      <a class="item" href="/products/sortbyNameDESC">Name Descending</a>
+    </div>
+      </div>
+<div class="item">
+      <div class="header">Stock</div>
+      <div class="menu">
+      <a class="item" href="/products/sortbyStockASC">Stock Ascending</a>
+      <a class="item" href="/products/sortbyStockDESC">Stock Descending</a>
+      </div>
+  </div>
+<div class="item">
+      <div class="header">Animal</div>
+      <div class="menu">
+      <a class="item" href="/products/sortbyDog">Dog Products</a>
+      <a class="item" href="/products/sortbyCat">Cat Products</a>
+    </div>
     </div>
   </div>
-  <div class="item">
-    <div class="header">Hosting</div>
-    <div class="menu">
-      <a class="item active">Shared</a>
-      <a class="item">Dedicated</a>
     </div>
-  </div>
-  <div class="item">
-    <div class="header">Support</div>
-    <div class="menu">
-      <a class="item">E-mail Support</a>
-      <a class="item">FAQs</a>
-   </div>
-  </div>
-</div>
-  </div>
+  
+  
+
+
+  
   <div class="fourteen wide column">
 <div class="ui special cards" id="products">
   {{#each products as |product|}}
@@ -42,6 +46,8 @@
 </div>
 </div>
 </div>
+
+
 
   {{#each products as |product|}}
   {{> productsModal}}
