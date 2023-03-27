@@ -5,8 +5,7 @@ const userLogin = async (event) => {
   // declare refrences to input fields
   const usernameInput = document.querySelector("#username-input-login").value;
   const passwordInput = document.querySelector("#password-input-login").value;
-console.log(usernameInput);
-console.log(passwordInput);
+
   // post to login functionality under userRoutes.js and fetch response
   const loginRequest = await fetch("/api/user/login", {
     method: "POST",
