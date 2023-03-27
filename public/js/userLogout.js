@@ -7,11 +7,11 @@ const userLogout = async () => {
 
   // if request goes through user is moved to page
   if (logoutRequest.ok) {
-    document.location.replace('/products');
+    document.location.replace('/');
   } else {
     // **********do we want to handle this differently?
     alert("Something went wrong, failed to log out, please try again");
   }
 };
 // // event listener on click
-document.querySelector('#logout-link').addEventListener('click', userLogout);
+document.querySelector('#userLogout').addEventListener('click', userLogout);

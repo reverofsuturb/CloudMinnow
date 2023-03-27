@@ -40,9 +40,14 @@
               <a href="/login"><div class="ui button" id="sign-up">Sign Up</div></a>
             </div>
           </li>
+
           <li class="nav-item">
             <div class="item">
+              {{#if loggedIn}}
+              <a href="/"><div class="ui button" id="userLogout">Logout</div></a>
+              {{else}}
               <a href="/login"><div class="ui button" id="login">Login</div></a>
+              {{/if}}
             </div>
           </li>
         </ul>
@@ -87,4 +92,5 @@
     referrerpolicy="no-referrer"
   ></script>
   <script src="/js/semantic.js"></script>
+  <script src="/js/userLogout.js"></script>
 </html>
