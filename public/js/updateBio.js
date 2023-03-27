@@ -5,7 +5,7 @@ const updateBio = async (event) => {
   // declare refrences to input fields
   const userbioInput = document.querySelector("#update-user-bio").value;
 
-  const updatebioRequest = await fetch("/api/user", {
+  const updatebioRequest = await fetch("/profile/", {
     method: "PUT",
     body: JSON.stringify({
       biography: userbioInput,
