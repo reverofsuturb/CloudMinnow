@@ -21,12 +21,28 @@ for (let i = 0; i < 100; i++) {
     $(modal).modal("show");
   });
 }
+
+for (let i = 0; i < 100; i++) {
+  let id = `add-${i}`;
+  let add = ('#' + id);
+  let hiddenId = `hidden-${i}`;
+  let show = ('#' + hiddenId);
+
+  $(add).on("click", function () {
+    $(show).removeClass("hidden")
+  })
+}
+
   
 $('#new-pet').on('click', function() {
   $('.ui.modal')
   .modal('show');
 });
 
+$('#cart').on("click", function() {
+  $('.ui.sidebar')
+  .sidebar('toggle')
+});
 
 // Nav functions
 const hamburger = document.querySelector(".hamburger");

@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a href="/profile" class="nav-link">Profile</a>
           </li>
+          <li class-"nav-item">
+            <i class="cart arrow down icon" id="cart"></i>
+          </li>
           <li class="nav-item">
             <div class="item">
               <a href="/login"><div class="ui button" id="sign-up">Sign Up</div></a>
@@ -60,8 +63,18 @@
     </header>
     <section id="divider"></section>
 
+<body>
+  <div class="wrapper">
+    <div class="ui right sidebar inverted vertical menu" id="cart-menu">
+    {{#each products as |product|}}
+    {{> productCart}}
+    {{/each}}
+    </div>
+  </div>  
+
     {{{body}}}
 
+</body>
     <!-- Footer Section -->
     <section class="footer">
       <div class="ui left aligned grid">
