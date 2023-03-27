@@ -66,7 +66,7 @@ router.post("/", async (req, res) => {
 //UPDATE ANIMAL
 
 router.put("/:id", (req, res) => {
-  // update a tag's name by its `id` value
+
   Animal.update(req.body, {
     where: {
       id: req.params.id,
