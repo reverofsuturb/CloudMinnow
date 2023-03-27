@@ -17,7 +17,11 @@ const PORT = process.env.PORT || 3001;
 // connect-session-sequelize using dotenv for masking secret
 const sess = {
   secret: process.env.DB_KEY,
-  cookie: {},
+  cookie: { 
+    maxAge: 12 * 60 * 60 * 1000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
