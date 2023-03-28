@@ -19,6 +19,7 @@ router.get("/profile", withAuth, async (req, res) => {
             "name",
             "age",
             "description",
+            "created_at",
             "user_id",
             "species_id",
           ],
@@ -250,5 +251,28 @@ router.put("/profile", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// get products for specific pet
+router.get("/products/:id", async (req, res) => {
+  try {
+    const productData = await Product.findAll({
+      where: {
+        species_id: req.params.id,
+      },
+      include: [
+        {
+          model: Species,
+          required: false,
+          include: { model: Animal },
+        },
+      ],
+    });
+    const products = productData.map((product) => product.get({ plain: true }));
+    res.render("products", { products, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;
