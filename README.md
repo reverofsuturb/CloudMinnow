@@ -3,6 +3,7 @@
 ## Description
 
 Fluffy is a full stack web application which allows a user to register a pet, and browse in a product database with many different items. You can select products and add them to a purchasing cart, while maintaining a record of a user’s purchase history. This application also utilizes request authentication to have access to the main functionality.
+![localhost_3001_](https://user-images.githubusercontent.com/123609107/228113221-584e3b12-de01-403a-a49d-2fc2e9d3e77b.png)
 
 ---
 
