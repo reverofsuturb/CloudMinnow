@@ -24,6 +24,10 @@ Animal.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
 
     user_id: {
       type: DataTypes.INTEGER,
