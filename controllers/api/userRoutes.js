@@ -35,6 +35,7 @@ router.get("/:id", async (req, res) => {
       res.status(404).json({ message: "No user with that id" });
       return;
     }
+
     res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
@@ -50,7 +51,7 @@ router.post("/", async (req, res) => {
       password: req.body.password,
       has_pets: req.body.has_pets,
     });
-    console.log(newUser);
+    // console.log(newUser);
     req.session.save(() => {
       req.session.userId = newUser.id;
       req.session.username = req.body.username;

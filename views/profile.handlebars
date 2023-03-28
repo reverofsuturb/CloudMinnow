@@ -2,19 +2,46 @@
 
   <div class="ui two column grid" id="profile">
 
-    <div class="column" id="left-prof-col">
+    <div class="center aligned column" id="left-prof-col">
       <div class="row">
-        <div class="ui raised segment">
-          <a class="ui ribbon label" id="ribbon-1">Overview</a>
-          <span>{{user.username}}</span>
-          <span>{{user.email}}</span>
-          <p>Test</p>
-          <a class="ui ribbon label" id="ribbon-2">Community</a>
-          <p>Test</p>
+        <div class="ui left aligned raised segment" id="about">
+          <a class="ui ribbon label" id="ribbon-1">About</a>
+          <span><h2>{{user.username}}</h2></span>
+          <span><h3>{{user.email}}</h3></span>
+          
+          <h5>Share some information about your pet(s) and what they enjoy, products you have purchased for them, or products you may be on the look out for!</h5>
+{{!-- Bio Info Modal --}}
+        <div>
+          <button class="ui button" id="new-bio">Add Info</button>
+          <div class="ui modal 2">
+            <div class="header">Add Your Info</div>
+            <div class="content">
+              <form id="bio-form" class="ui form">
+                <div class="field">
+                  <label>Info</label>
+                  <input
+                    id="update-user-bio"
+                    type="text"
+                    name="info"
+                    placeholder="info"
+                  />
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+    <div class="bio">
+<h5>{{user.biography}}</h5>
+    </div>
+          
         </div>
       </div>
       <div class="row">
-        <div>
+        
+        {{!-- Register Pet Modal --}}
+        <div class="ui container left aligned">
           <button class="ui button active" id="new-pet">Add new pet</button>
           <div class="ui modal">
             <div class="header">Add New Pet</div>
@@ -79,12 +106,18 @@
       </div>
     </div>
 
+{{!-- Pet Profile Turnstile and Buttons--}}
     <div class="center aligned column" id="right-prof-col">
       <div class="ui people shape">
         <div class="sides">
+          
             {{#each user.animals as |animal|}}
             {{> profilePet}}
-            {{/each}}
+            {{/each}} 
+            
+        
+      </div>
+        </div>
           <div class="ui container" id="prof-buttons">
             <ui class="grid">
               <div class="row">
@@ -95,15 +128,15 @@
                   <button class="ui button" id="rollback_right"><i
                       class="angle right icon"
                     ></i></button>
-                </div>
               </div>
             </ui>
           </div>
-        </div>
       </div>
     </div>
+    
 
   </div>
 </section>
 
+<script src="/js/updateBio.js"></script>
 <script src="/js/registerAnimal.js"></script>

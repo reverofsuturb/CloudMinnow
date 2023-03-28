@@ -1,15 +1,13 @@
-<div class="active side">
+<div class="side {{active}}">
   <div class="ui card">
     <div class="image">
       <img src="https://i.imgur.com/H1nxniL.jpg" />
     </div>
     <div class="content left aligned">
-      <div
-        class="ui ribbon label left aligned"
-        id="name-age"
-      >{{name}}, Age: {{age}}</div>
+      <div class="ui ribbon label left aligned" id="name-age">{{name}}, Age:
+        {{age}}</div>
       <div class="meta">
-        <a>Take me to Dog Products</a>
+        <a href="/products/{{species_id}}" class="item">Get all items for {{name}} </a>
       </div>
       <div class="description">
         {{description}}
@@ -17,7 +15,7 @@
     </div>
     <div class="extra content">
       <span class="right floated">
-        Joined in 2021
+        Joined in {{format_date  created_at}}
       </span>
     </div>
   </div>
