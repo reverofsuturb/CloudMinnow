@@ -1,12 +1,12 @@
 <div id="log-reg">
   <div class="ui placeholder segment">
-    <div class="ui vertical divider">
+    <div class="ui vertical divider" id="or">
       Or
     </div>
     <div class="ui two column very relaxed stackable grid">
       <div class="column">
         <div class="ui form">
-          <div class="field">
+          <div class="field" id="lUsername">
             <label>Username</label>
             <div class="ui left icon input">
               <input
@@ -17,7 +17,7 @@
               <i class="user icon"></i>
             </div>
           </div>
-          <div class="field">
+          <div class="field" id="lPassword">
             <label>Password</label>
             <div class="ui left icon input">
               <input type="password" id="password-input-login" />
@@ -29,7 +29,7 @@
       </div>
       <div class="column">
         <div class="ui form">
-          <div class="field">
+          <div class="field" id="username">
             <label>Username</label>
             <div class="ui left icon input">
               <input
@@ -39,7 +39,7 @@
               />
               <i class="User icon"></i>
             </div>
-            <div class="field">
+            <div class="field" id="email">
               <label>Email</label>
               <div class="ui left icon input">
                 <input
@@ -51,15 +51,15 @@
               </div>
               <div class="field">
                 <div id="password">
-                <label>Password</label>
-                <div class="ui left icon input">
-                  <input
-                    type="text"
-                    id="password-input-register"
-                    placeholder="New Password"
-                  />
-                  <i class="lock icon"></i>
-                </div>
+                  <label>Password</label>
+                  <div class="ui left icon input">
+                    <input
+                      type="text"
+                      id="password-input-register"
+                      placeholder="New Password"
+                    />
+                    <i class="lock icon"></i>
+                  </div>
                 </div>
                 <div class="ui toggle checkbox">
                   <input
@@ -71,11 +71,11 @@
                 </div>
                 <div class="middle aligned column">
                   <div id="login-button">
-                  <div class="ui big button" id="registeruser-form">
-                    <i class="signup icon"></i>
-                    Sign Up
+                    <div class="ui big button" id="registeruser-form">
+                      <i class="signup icon"></i>
+                      Sign Up
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>

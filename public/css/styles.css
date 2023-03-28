@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
 :root {
   --light-1: #d8d5ba;
   --light-2: #93a4b8;
@@ -9,12 +12,15 @@
   --medium-3: #7a492b;
   --dark: #0c3b2e;
   --darkest: #000000;
+  --font-family-1: "Amatic SC", cursive;
+  --font-family-2: "Josefin Sans", sans-serif;
 }
 
 * {
   margin: 0%;
   padding: 0px;
   box-sizing: border-box;
+  font-family: var(--font-family-2);
 }
 
 /* ================== NAV BAR SECTION ================== */
@@ -42,6 +48,9 @@
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--light-2);
+  font-size: 45px;
+  font-family: var(--font-family-1);
+  font-weight: 700;
 }
 
 .nav-link:hover {
@@ -50,7 +59,7 @@
 }
 
 .nav-logo {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--medium-light-3);
 }
@@ -65,6 +74,7 @@
 #logo-tag {
   text-align: center;
   font-size: 15p;
+  font-family: var(--font-family-2);
 }
 
 .nav-logo:hover {
@@ -89,18 +99,21 @@
   border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
+  font-family: var(--font-family-2);
 }
 
 #login {
   border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
+  font-family: var(--font-family-2);
 }
 
 #userLogout {
   border: 3px solid var(--medium-light-3);
   background-color: var(--light-1);
   font-size: 15px;
+  font-family: var(--font-family-2);
 }
 
 /* ================== TOP DIVIDER ================== */
@@ -121,6 +134,39 @@
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
+  font-size: 20px;
+}
+
+#lUsername {
+  font-size: 20px;
+}
+
+#lPassword {
+  font-size: 20px;
+}
+
+#or {
+  font-size: 30px;
+}
+
+#username {
+  font-size: 20px;
+}
+
+#password {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+#email {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+#login-button {
+  padding-top: 10px;
 }
 
 /* ================== PROFILE SECTION ================== */
@@ -191,6 +237,10 @@
   border-top: 3px solid var(--medium-light-3);
 }
 
+.footer a {
+  font-family: var(--font-family-2);
+}
+
 .socials li {
   display: inline;
 }
@@ -232,8 +282,30 @@
   background-color: var(--light-1);
 }
 
+#filter a {
+  font-family: var(--font-family-2);
+  font-size: 18px;
+}
+
+#filter-popup {
+  font-family: var(--font-family-1);
+}
+
+div#filter.ui.menu {
+  width: 100%;
+}
+
+h4.ui.header {
+  font-size: 18px;
+  font-family: var(--font-family-2);
+}
+
 .ui.inverted.button {
   background-color: var(--medium-light-3);
+}
+
+#product-name {
+  font-family: var(--font-family-2);
 }
 
 #modal-price {
@@ -261,15 +333,8 @@
   background-position: center;
 }
 
-#password {
-  padding-bottom: 10px;
-}
-
-#login-button {
-  padding-top: 10px;
-}
-
 #landing-button1 {
+  font-family: var(--font-family-2);
   box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   background-color: var(--medium-light-1);
@@ -301,6 +366,7 @@
 }
 
 #landing-button2 {
+  font-family: var(--font-family-2);
   box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   background-color: var(--medium-light-1);
@@ -327,12 +393,18 @@
   transition: background 300ms ease-in-out;
 }
 #landing-button2:hover {
-  background-position: 200%;
+  background-position: 400%;
   transition: background 300ms ease-in-out;
+}
+
+.or {
+  font-family: var(--font-family-2);
 }
 
 #cart {
   color: var(--light-2);
+  height: 30px;
+  width: 30px;
 }
 
 #cart:hover {
