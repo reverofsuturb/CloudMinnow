@@ -3,7 +3,7 @@ const { Product } = require("../models");
 const productData = [
   {
     product_name: "Booster Dog Seat",
-    product_description: "For big dog",
+    product_description: "For big dog.",
     price: 14.99,
     filename: "01-Booster-Dog-Seat.jpg",
     stock: 14,
@@ -11,7 +11,7 @@ const productData = [
   },
   {
     product_name: "Tennis Ball Set Squeaker Dog Toy",
-    product_description: "Blue and soft",
+    product_description: "Blue and soft.",
     price: 90.0,
     filename: "02-Tennis-Ball-Set.jpg",
     stock: 25,
@@ -19,7 +19,7 @@ const productData = [
   },
   {
     product_name: "Real Wood Cat Tree With Top Perch",
-    product_description: "Made of real wood",
+    product_description: "Made of real wood.",
     price: 22.99,
     filename: "03-Real-Wood-Cat-Tree.jpg",
     stock: 12,
@@ -28,7 +28,7 @@ const productData = [
   {
     product_name: "23-in Scratch & Play Cuddler Cat Scratcher",
     product_description:
-      "Let your cat scratch the scratcher not your furniture",
+      "Let your cat scratch the scratcher not your furniture.",
     price: 12.99,
     filename: "04-Cuddler-Cat-Scratcher.jpg",
     stock: 50,
@@ -36,7 +36,7 @@ const productData = [
   },
   {
     product_name: "Grey Cat Blanket",
-    product_description: "Soft and washable",
+    product_description: "Soft and washable.",
     price: 29.99,
     filename: "05-Grey-Cat-Blanket.jpg",
     stock: 22,
@@ -44,7 +44,7 @@ const productData = [
   },
   {
     product_name: "Dog Treat - Peanut Butter",
-    product_description: "",
+    product_description: "A tasty treat to keep your dog engaged with a toy.",
     price: 9.99,
     filename: "06-Dog-Treat-Peanut-Butter.jpg",
     stock: 122,
@@ -53,7 +53,7 @@ const productData = [
   {
     product_name: "Natural Teaser Cat Toys",
     product_description:
-      "Interact with your cat while satisfying her natural instinct to hunt",
+      "Interact with your cat while satisfying her natural instinct to hunt.",
     price: 9.99,
     filename: "07-Natural-Teaser-Cat-Toys.jpg",
     stock: 5,
@@ -62,7 +62,7 @@ const productData = [
   {
     product_name: "Sandwich Dog Toy",
     product_description:
-      "Plush Sandwich Dog Toy is a plush toy that provides companionship and comfort",
+      "Plush Sandwich Dog Toy is a plush toy that provides companionship and comfort.",
     price: 9.99,
     filename: "08-Sandwich-Dog-Toy.jpg",
     stock: 20,
@@ -70,15 +70,15 @@ const productData = [
   },
   {
     product_name: "Robotic Bug Cat Toy",
-    product_description: "Allows for interactive pet playtime",
+    product_description: "Allows for interactive pet playtime.",
     price: 6.99,
     filename: "09-Robotic-Bug-Cat-Toy.jpg",
     stock: 30,
     species_id: 2,
   },
   {
-    product_name: "3-in1 Dog Stroller",
-    product_description: "Multi-use carrier ideal for disabled or senior pets",
+    product_name: "3-in-1 Dog Stroller",
+    product_description: "Multi-use carrier ideal for disabled or senior pets.",
     price: 99.99,
     filename: "10-3-in1-Pet-Stroller.jpg",
     stock: 8,
@@ -86,7 +86,7 @@ const productData = [
   },
   {
     product_name: "Peek-a-Prize Toy Box Cat Toy",
-    product_description: "Stimulates a cat's desire to hunt and play",
+    product_description: "Stimulates a cat's desire to hunt and play.",
     price: 19.99,
     filename: "11-Box-Cat-Toy.jpg",
     stock: 9,
@@ -95,10 +95,238 @@ const productData = [
   {
     product_name: "Baseball Dog Cap",
     product_description:
-      "Blue Baseball Cap makes a great fashion choice for your furry friend",
+      "Blue Baseball Cap makes a great fashion choice for your furry friend.",
     price: 9.99,
     filename: "12-Baseball-Dog-Cap.jpg",
     stock: 12,
+    species_id: 1,
+  },
+  {
+    product_name: "Puppy starter kit",
+    product_description:
+      "Included in the set is a blue harness, grooming brush and comb, black collar and ball.",
+    price: 29.99,
+    filename: "13-ball-near-dog-stuff.jpg",
+    stock: 8,
+    species_id: 1,
+  },
+  {
+    product_name: "Sid-by-side food and water",
+    product_description: "A convenient dual bowl setup for food and water.",
+    price: 14.99,
+    filename: "14-bowls-dry-food-water.jpg",
+    stock: 18,
+    species_id: 2,
+  },
+  {
+    product_name: "Paw print cat collar",
+    product_description:
+      "A quality and simple designed collar with a paw print collar.",
+    price: 12.99,
+    filename: "15-cat-collar.png",
+    stock: 11,
+    species_id: 2,
+  },
+  {
+    product_name: "Cat grooming kit",
+    product_description:
+      "Quality and safe products for when your furry friend needs a spa day.",
+    price: 12.99,
+    filename: "16-cat-groom.png",
+    stock: 8,
+    species_id: 2,
+  },
+  {
+    product_name: "Dog starter kit",
+    product_description:
+      "Hand selected leather leash, matching pet cleanup bio-degradable bag holder, chew bone, brush, and bowl.",
+    price: 32.99,
+    filename: "17-leash-food-brush.jpg",
+    stock: 6,
+    species_id: 1,
+  },
+  {
+    product_name: "Assorted dog bones",
+    product_description: "A small collection of dog bones.",
+    price: 14.99,
+    filename: "18-chewing-bones-tabletop.jpg",
+    stock: 17,
+    species_id: 1,
+  },
+  {
+    product_name: "Set of 8 small dog bones",
+    product_description:
+      "Save on dog bones with this multi-pack to keep your pup busy.",
+    price: 18.99,
+    filename: "19-chewing-bones.jpg",
+    stock: 13,
+    species_id: 1,
+  },
+  {
+    product_name: "Cardboard bed/cat scratcher",
+    product_description:
+      "A unique cat bed that also doubles as a cat scratcher and play environment.",
+    price: 24.99,
+    filename: "20-close-up-beautiful-cat-.jpg",
+    stock: 5,
+    species_id: 2,
+  },
+  {
+    product_name: "Dob bowl treat combo set",
+    product_description: "Get a new food bowl with an assortment of treats.",
+    price: 19.99,
+    filename: "21-close-up-bowl.jpg",
+    stock: 9,
+    species_id: 1,
+  },
+  {
+    product_name: "Dob treat collection",
+    product_description: "A multi pack of tasty dog snacks.",
+    price: 14.99,
+    filename: "22-close-up-pet-dainties.jpg",
+    stock: 20,
+    species_id: 1,
+  },
+  {
+    product_name: "Dog waste bags",
+    product_description: "A pink waste bag holder with three refills.",
+    price: 12.99,
+    filename: "23-collar-leash-food.jpg",
+    stock: 16,
+    species_id: 1,
+  },
+  {
+    product_name: "Dog collar and brush combo",
+    product_description:
+      "A quality leather dog collar with silver charms with a brush and de-shedder.",
+    price: 24.99,
+    filename: "24-collar-near-brush.jpg",
+    stock: 6,
+    species_id: 1,
+  },
+  {
+    product_name: "Dog chew bones",
+    product_description: "Medium sized dog chew bones.",
+    price: 14.99,
+    filename: "25-dog-chew-bones.jpg",
+    stock: 31,
+    species_id: 1,
+  },
+  {
+    product_name: "Black leather dog collar",
+    product_description: "A quality leather dog collar with silver charms.",
+    price: 12.99,
+    filename: "26-dog-collar-white.jpg",
+    stock: 15,
+    species_id: 1,
+  },
+  {
+    product_name: "Brown leather dog collar with chain leash",
+    product_description: "A quality leather dog collar with metal chain leash.",
+    price: 24.99,
+    filename: "27-dog-leash.jpg",
+    stock: 12,
+    species_id: 1,
+  },
+  {
+    product_name: "Rubber chicken flavored chew with fetch balls",
+    product_description:
+      "Chicken flavored chewing bones along with a rubber toy balls for fetch.",
+    price: 16.99,
+    filename: "28-dog-toys.png",
+    stock: 9,
+    species_id: 1,
+  },
+  {
+    product_name: "Retractable leash with collar",
+    product_description:
+      "A yellow and green retractable leach and collar for medium dogs.",
+    price: 31.99,
+    filename: "29-leash-collar.png",
+    stock: 14,
+    species_id: 1,
+  },
+  {
+    product_name: "Dual ceramic feeding bowls",
+    product_description: "Dark green heavy duty ceramic feeding bowls.",
+    price: 19.99,
+    filename: "30-pet-food-assortment.jpg",
+    stock: 14,
+    species_id: 1,
+  },
+  {
+    product_name: "Single pink feeding bowl",
+    product_description: "Bright pink single feeding dish.",
+    price: 14.99,
+    filename: "31-pet-food.jpg",
+    stock: 13,
+    species_id: 2,
+  },
+  {
+    product_name: "Dual pink feeding bowl",
+    product_description: "Bright pink side-by-side feeding dish.",
+    price: 24.99,
+    filename: "32-pet-food2.jpg",
+    stock: 8,
+    species_id: 2,
+  },
+  {
+    product_name: "Dog waste bags and holder",
+    product_description: "A pink waste bag holder with three refills.",
+    price: 12.99,
+    filename: "33-plastic-bags.jpg",
+    stock: 16,
+    species_id: 1,
+  },
+  {
+    product_name: "Dog waste bag and holders",
+    product_description:
+      "Leash attachable dog waste bag holders in an assortment of colors.",
+    price: 19.99,
+    filename: "34-poop-bag-holders.png",
+    stock: 11,
+    species_id: 1,
+  },
+  {
+    product_name: "Vintage color cat tower",
+    product_description:
+      "Vintage colored cat tower with scratching posts, elastic string toys, and soft multi level surfaces.",
+    price: 59.99,
+    filename: "35-scottish-gray-cat.jpg",
+    stock: 8,
+    species_id: 2,
+  },
+  {
+    product_name: "Expandable travel water bowls",
+    product_description:
+      "Teal colored expandable travel bowls that can attach to your leash for when you are on the go.",
+    price: 19.99,
+    filename: "36-travel-bowl.png",
+    stock: 12,
+    species_id: 1,
+  },
+  {
+    product_name: "Small pack dog treats",
+    product_description: "A small pack of tasty dog treats.",
+    price: 14.99,
+    filename: "37-treats-dogs.jpg",
+    stock: 16,
+    species_id: 1,
+  },
+  {
+    product_name: "Small blue dog bed",
+    product_description: "A small blue dog bed for small dogs.",
+    price: 34.99,
+    filename: "38-white-little-puppy.jpg",
+    stock: 12,
+    species_id: 1,
+  },
+  {
+    product_name: "Dog grooming set",
+    product_description: "Shampoo, conditioner, paw salve for your dog.",
+    price: 27.99,
+    filename: "39-white-puppy-bath.jpg",
+    stock: 15,
     species_id: 1,
   },
 ];
